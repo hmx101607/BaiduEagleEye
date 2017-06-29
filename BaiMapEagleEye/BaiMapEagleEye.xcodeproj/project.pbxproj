@@ -1,0 +1,749 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		070B62DCC98922FFE893AE39 /* libPods-BaiMapEagleEye.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F94B882D03E93F90BC38EB /* libPods-BaiMapEagleEye.a */; };
+		934C04721F049DA700659D9E /* BMHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 934C04701F049DA700659D9E /* BMHomeViewController.m */; };
+		934C04731F049DA700659D9E /* BMHomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 934C04711F049DA700659D9E /* BMHomeViewController.storyboard */; };
+		934C04771F049E5B00659D9E /* BMAnnotationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 934C04751F049E5B00659D9E /* BMAnnotationViewController.m */; };
+		934C04781F049E5B00659D9E /* BMAnnotationViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 934C04761F049E5B00659D9E /* BMAnnotationViewController.storyboard */; };
+		934C047C1F049E6E00659D9E /* BMPathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 934C047A1F049E6E00659D9E /* BMPathViewController.m */; };
+		934C047D1F049E6E00659D9E /* BMPathViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 934C047B1F049E6E00659D9E /* BMPathViewController.storyboard */; };
+		93ADA9451F0490B90000A2F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ADA9441F0490B90000A2F7 /* main.m */; };
+		93ADA9471F0490B90000A2F7 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 93ADA9461F0490B90000A2F7 /* Podfile */; };
+		93ADA95D1F0490B90000A2F7 /* GGUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ADA95C1F0490B90000A2F7 /* GGUtil.m */; };
+		93ADA9601F0490B90000A2F7 /* UIViewController+NavItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ADA95F1F0490B90000A2F7 /* UIViewController+NavItem.m */; };
+		93ADA9641F0490B90000A2F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ADA9631F0490B90000A2F7 /* AppDelegate.m */; };
+		93ADA96B1F0490B90000A2F7 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 93ADA96A1F0490B90000A2F7 /* libsqlite3.dylib */; };
+		93ADA96D1F0490B90000A2F7 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93ADA96C1F0490B90000A2F7 /* images.xcassets */; };
+		93ADA99D1F0490ED0000A2F7 /* NSObject+AutoDescription.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ADA9781F0490ED0000A2F7 /* NSObject+AutoDescription.m */; };
+		93ADA99E1F0490ED0000A2F7 /* UIActionSheet+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ADA97A1F0490ED0000A2F7 /* UIActionSheet+Blocks.m */; };
+		93ADA99F1F0490ED0000A2F7 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ADA97C1F0490ED0000A2F7 /* UIAlertView+Blocks.m */; };
+		93ADA9A01F0490ED0000A2F7 /* UIButton+ActivityIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ADA97E1F0490ED0000A2F7 /* UIButton+ActivityIndicatorView.m */; };
+		93ADA9A11F0490ED0000A2F7 /* UILabel+FormattedText.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ADA9801F0490ED0000A2F7 /* UILabel+FormattedText.m */; };
+		93ADA9A21F0490ED0000A2F7 /* UIStoryboard+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ADA9821F0490ED0000A2F7 /* UIStoryboard+Addition.m */; };
+		93ADA9A31F0490ED0000A2F7 /* UITableViewCell+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ADA9841F0490ED0000A2F7 /* UITableViewCell+Utils.m */; };
+		93ADA9A41F0490ED0000A2F7 /* UIView+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ADA9861F0490ED0000A2F7 /* UIView+Create.m */; };
+		93ADA9A51F0490ED0000A2F7 /* UIView+LayoutConstraintHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ADA9881F0490ED0000A2F7 /* UIView+LayoutConstraintHelper.m */; };
+		93ADA9A61F0490ED0000A2F7 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ADA98A1F0490ED0000A2F7 /* UIView+Utils.m */; };
+		93ADA9A71F0490ED0000A2F7 /* UIViewController+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ADA98C1F0490ED0000A2F7 /* UIViewController+Create.m */; };
+		93ADA9A81F0490ED0000A2F7 /* ArrayUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ADA9921F0490ED0000A2F7 /* ArrayUtils.m */; };
+		93ADA9A91F0490ED0000A2F7 /* AutorotateNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ADA9941F0490ED0000A2F7 /* AutorotateNavigationController.m */; };
+		93ADA9AA1F0490ED0000A2F7 /* GGDatePickerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ADA9961F0490ED0000A2F7 /* GGDatePickerHelper.m */; };
+		93ADA9AB1F0490ED0000A2F7 /* GGImagePickerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ADA9981F0490ED0000A2F7 /* GGImagePickerHelper.m */; };
+		93ADA9AC1F0490ED0000A2F7 /* GGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ADA99A1F0490ED0000A2F7 /* GGNavigationController.m */; };
+		93ADA9AD1F0490ED0000A2F7 /* PortraitNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ADA99C1F0490ED0000A2F7 /* PortraitNavigationController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1833DE61645C671736942713 /* Pods-BaiMapEagleEye.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiMapEagleEye.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaiMapEagleEye/Pods-BaiMapEagleEye.debug.xcconfig"; sourceTree = "<group>"; };
+		293DCF466844CA06B122E073 /* Pods-BaiMapEagleEye.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiMapEagleEye.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaiMapEagleEye/Pods-BaiMapEagleEye.release.xcconfig"; sourceTree = "<group>"; };
+		399C539059DCBC232A29D11D /* Pods-BaiMapEagleEye.app store.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaiMapEagleEye.app store.xcconfig"; path = "Pods/Target Support Files/Pods-BaiMapEagleEye/Pods-BaiMapEagleEye.app store.xcconfig"; sourceTree = "<group>"; };
+		934C046F1F049DA700659D9E /* BMHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMHomeViewController.h; sourceTree = "<group>"; };
+		934C04701F049DA700659D9E /* BMHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMHomeViewController.m; sourceTree = "<group>"; };
+		934C04711F049DA700659D9E /* BMHomeViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BMHomeViewController.storyboard; sourceTree = "<group>"; };
+		934C04741F049E5B00659D9E /* BMAnnotationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMAnnotationViewController.h; sourceTree = "<group>"; };
+		934C04751F049E5B00659D9E /* BMAnnotationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMAnnotationViewController.m; sourceTree = "<group>"; };
+		934C04761F049E5B00659D9E /* BMAnnotationViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BMAnnotationViewController.storyboard; sourceTree = "<group>"; };
+		934C04791F049E6E00659D9E /* BMPathViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMPathViewController.h; sourceTree = "<group>"; };
+		934C047A1F049E6E00659D9E /* BMPathViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMPathViewController.m; sourceTree = "<group>"; };
+		934C047B1F049E6E00659D9E /* BMPathViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BMPathViewController.storyboard; sourceTree = "<group>"; };
+		93ADA93E1F0490B90000A2F7 /* BaiMapEagleEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiMapEagleEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		93ADA9421F0490B90000A2F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93ADA9431F0490B90000A2F7 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		93ADA9441F0490B90000A2F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		93ADA9461F0490B90000A2F7 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../../Podfile; sourceTree = "<group>"; };
+		93ADA9491F0490B90000A2F7 /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Staging.xcconfig; path = Xcconfig/Staging.xcconfig; sourceTree = "<group>"; };
+		93ADA94A1F0490B90000A2F7 /* ProductionInhouse.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = ProductionInhouse.xcconfig; path = Xcconfig/ProductionInhouse.xcconfig; sourceTree = "<group>"; };
+		93ADA94B1F0490B90000A2F7 /* AS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AS.xcconfig; path = Xcconfig/AS.xcconfig; sourceTree = "<group>"; };
+		93ADA94D1F0490B90000A2F7 /* StagingPrivate.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = StagingPrivate.xcconfig; path = Xcconfig/InsideConfig/StagingPrivate.xcconfig; sourceTree = "<group>"; };
+		93ADA94E1F0490B90000A2F7 /* ProductionPrivate.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = ProductionPrivate.xcconfig; path = Xcconfig/InsideConfig/ProductionPrivate.xcconfig; sourceTree = "<group>"; };
+		93ADA94F1F0490B90000A2F7 /* ASPrivate.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = ASPrivate.xcconfig; path = Xcconfig/InsideConfig/ASPrivate.xcconfig; sourceTree = "<group>"; };
+		93ADA9501F0490B90000A2F7 /* Entitlements.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Entitlements.entitlements; sourceTree = "<group>"; };
+		93ADA9581F0490B90000A2F7 /* APIAddress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIAddress.h; sourceTree = "<group>"; };
+		93ADA9591F0490B90000A2F7 /* AppConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConfig.h; sourceTree = "<group>"; };
+		93ADA95B1F0490B90000A2F7 /* GGUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GGUtil.h; path = ext/GGUtil.h; sourceTree = "<group>"; };
+		93ADA95C1F0490B90000A2F7 /* GGUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GGUtil.m; path = ext/GGUtil.m; sourceTree = "<group>"; };
+		93ADA95E1F0490B90000A2F7 /* UIViewController+NavItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIViewController+NavItem.h"; path = "ext/UIViewController+NavItem.h"; sourceTree = "<group>"; };
+		93ADA95F1F0490B90000A2F7 /* UIViewController+NavItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+NavItem.m"; path = "ext/UIViewController+NavItem.m"; sourceTree = "<group>"; };
+		93ADA9621F0490B90000A2F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		93ADA9631F0490B90000A2F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		93ADA96A1F0490B90000A2F7 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = /usr/lib/libsqlite3.dylib; sourceTree = DEVELOPER_DIR; };
+		93ADA96C1F0490B90000A2F7 /* images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = images.xcassets; path = ../images.xcassets; sourceTree = "<group>"; };
+		93ADA9771F0490ED0000A2F7 /* NSObject+AutoDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AutoDescription.h"; sourceTree = "<group>"; };
+		93ADA9781F0490ED0000A2F7 /* NSObject+AutoDescription.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AutoDescription.m"; sourceTree = "<group>"; };
+		93ADA9791F0490ED0000A2F7 /* UIActionSheet+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIActionSheet+Blocks.h"; sourceTree = "<group>"; };
+		93ADA97A1F0490ED0000A2F7 /* UIActionSheet+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIActionSheet+Blocks.m"; sourceTree = "<group>"; };
+		93ADA97B1F0490ED0000A2F7 /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
+		93ADA97C1F0490ED0000A2F7 /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
+		93ADA97D1F0490ED0000A2F7 /* UIButton+ActivityIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+ActivityIndicatorView.h"; sourceTree = "<group>"; };
+		93ADA97E1F0490ED0000A2F7 /* UIButton+ActivityIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ActivityIndicatorView.m"; sourceTree = "<group>"; };
+		93ADA97F1F0490ED0000A2F7 /* UILabel+FormattedText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+FormattedText.h"; sourceTree = "<group>"; };
+		93ADA9801F0490ED0000A2F7 /* UILabel+FormattedText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+FormattedText.m"; sourceTree = "<group>"; };
+		93ADA9811F0490ED0000A2F7 /* UIStoryboard+Addition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+Addition.h"; sourceTree = "<group>"; };
+		93ADA9821F0490ED0000A2F7 /* UIStoryboard+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+Addition.m"; sourceTree = "<group>"; };
+		93ADA9831F0490ED0000A2F7 /* UITableViewCell+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+Utils.h"; sourceTree = "<group>"; };
+		93ADA9841F0490ED0000A2F7 /* UITableViewCell+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+Utils.m"; sourceTree = "<group>"; };
+		93ADA9851F0490ED0000A2F7 /* UIView+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Create.h"; sourceTree = "<group>"; };
+		93ADA9861F0490ED0000A2F7 /* UIView+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Create.m"; sourceTree = "<group>"; };
+		93ADA9871F0490ED0000A2F7 /* UIView+LayoutConstraintHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LayoutConstraintHelper.h"; sourceTree = "<group>"; };
+		93ADA9881F0490ED0000A2F7 /* UIView+LayoutConstraintHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LayoutConstraintHelper.m"; sourceTree = "<group>"; };
+		93ADA9891F0490ED0000A2F7 /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
+		93ADA98A1F0490ED0000A2F7 /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
+		93ADA98B1F0490ED0000A2F7 /* UIViewController+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Create.h"; sourceTree = "<group>"; };
+		93ADA98C1F0490ED0000A2F7 /* UIViewController+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Create.m"; sourceTree = "<group>"; };
+		93ADA98D1F0490ED0000A2F7 /* GGCommonKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGCommonKit.h; sourceTree = "<group>"; };
+		93ADA98F1F0490ED0000A2F7 /* GGCommonKitMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGCommonKitMacros.h; sourceTree = "<group>"; };
+		93ADA9911F0490ED0000A2F7 /* ArrayUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayUtils.h; sourceTree = "<group>"; };
+		93ADA9921F0490ED0000A2F7 /* ArrayUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayUtils.m; sourceTree = "<group>"; };
+		93ADA9931F0490ED0000A2F7 /* AutorotateNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AutorotateNavigationController.h; sourceTree = "<group>"; };
+		93ADA9941F0490ED0000A2F7 /* AutorotateNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AutorotateNavigationController.m; sourceTree = "<group>"; };
+		93ADA9951F0490ED0000A2F7 /* GGDatePickerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGDatePickerHelper.h; sourceTree = "<group>"; };
+		93ADA9961F0490ED0000A2F7 /* GGDatePickerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGDatePickerHelper.m; sourceTree = "<group>"; };
+		93ADA9971F0490ED0000A2F7 /* GGImagePickerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGImagePickerHelper.h; sourceTree = "<group>"; };
+		93ADA9981F0490ED0000A2F7 /* GGImagePickerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGImagePickerHelper.m; sourceTree = "<group>"; };
+		93ADA9991F0490ED0000A2F7 /* GGNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGNavigationController.h; sourceTree = "<group>"; };
+		93ADA99A1F0490ED0000A2F7 /* GGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGNavigationController.m; sourceTree = "<group>"; };
+		93ADA99B1F0490ED0000A2F7 /* PortraitNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PortraitNavigationController.h; sourceTree = "<group>"; };
+		93ADA99C1F0490ED0000A2F7 /* PortraitNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortraitNavigationController.m; sourceTree = "<group>"; };
+		A7F94B882D03E93F90BC38EB /* libPods-BaiMapEagleEye.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaiMapEagleEye.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93ADA93B1F0490B90000A2F7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93ADA96B1F0490B90000A2F7 /* libsqlite3.dylib in Frameworks */,
+				070B62DCC98922FFE893AE39 /* libPods-BaiMapEagleEye.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		077582339C6C29FB51366E6D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				399C539059DCBC232A29D11D /* Pods-BaiMapEagleEye.app store.xcconfig */,
+				1833DE61645C671736942713 /* Pods-BaiMapEagleEye.debug.xcconfig */,
+				293DCF466844CA06B122E073 /* Pods-BaiMapEagleEye.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4E02AC7D606B72FC28F548C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7F94B882D03E93F90BC38EB /* libPods-BaiMapEagleEye.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		93ADA9351F0490B90000A2F7 = {
+			isa = PBXGroup;
+			children = (
+				93ADA9401F0490B90000A2F7 /* BaiMapEagleEye */,
+				93ADA93F1F0490B90000A2F7 /* Products */,
+				077582339C6C29FB51366E6D /* Pods */,
+				4E02AC7D606B72FC28F548C6 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		93ADA93F1F0490B90000A2F7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93ADA93E1F0490B90000A2F7 /* BaiMapEagleEye.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93ADA9401F0490B90000A2F7 /* BaiMapEagleEye */ = {
+			isa = PBXGroup;
+			children = (
+				93ADA9511F0490B90000A2F7 /* app */,
+				93ADA9571F0490B90000A2F7 /* config */,
+				93ADA9691F0490B90000A2F7 /* dylib */,
+				93ADA95A1F0490B90000A2F7 /* ext */,
+				93ADA9611F0490B90000A2F7 /* i18n */,
+				93ADA9651F0490B90000A2F7 /* resources */,
+				93ADA9411F0490B90000A2F7 /* Supporting Files */,
+				93ADA9661F0490B90000A2F7 /* vendors */,
+				93ADA9481F0490B90000A2F7 /* Xcconfig */,
+			);
+			path = BaiMapEagleEye;
+			sourceTree = "<group>";
+		};
+		93ADA9411F0490B90000A2F7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				93ADA9461F0490B90000A2F7 /* Podfile */,
+				93ADA9421F0490B90000A2F7 /* Info.plist */,
+				93ADA9431F0490B90000A2F7 /* Prefix.pch */,
+				93ADA9441F0490B90000A2F7 /* main.m */,
+				93ADA9501F0490B90000A2F7 /* Entitlements.entitlements */,
+				93ADA9621F0490B90000A2F7 /* AppDelegate.h */,
+				93ADA9631F0490B90000A2F7 /* AppDelegate.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		93ADA9481F0490B90000A2F7 /* Xcconfig */ = {
+			isa = PBXGroup;
+			children = (
+				93ADA9491F0490B90000A2F7 /* Staging.xcconfig */,
+				93ADA94A1F0490B90000A2F7 /* ProductionInhouse.xcconfig */,
+				93ADA94B1F0490B90000A2F7 /* AS.xcconfig */,
+				93ADA94C1F0490B90000A2F7 /* InsideConfig */,
+			);
+			name = Xcconfig;
+			sourceTree = "<group>";
+		};
+		93ADA94C1F0490B90000A2F7 /* InsideConfig */ = {
+			isa = PBXGroup;
+			children = (
+				93ADA94D1F0490B90000A2F7 /* StagingPrivate.xcconfig */,
+				93ADA94E1F0490B90000A2F7 /* ProductionPrivate.xcconfig */,
+				93ADA94F1F0490B90000A2F7 /* ASPrivate.xcconfig */,
+			);
+			name = InsideConfig;
+			sourceTree = "<group>";
+		};
+		93ADA9511F0490B90000A2F7 /* app */ = {
+			isa = PBXGroup;
+			children = (
+				93ADA9521F0490B90000A2F7 /* apis */,
+				93ADA9531F0490B90000A2F7 /* controllers */,
+				93ADA9541F0490B90000A2F7 /* models */,
+				93ADA9551F0490B90000A2F7 /* modules */,
+				93ADA9561F0490B90000A2F7 /* views */,
+			);
+			path = app;
+			sourceTree = "<group>";
+		};
+		93ADA9521F0490B90000A2F7 /* apis */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = apis;
+			sourceTree = "<group>";
+		};
+		93ADA9531F0490B90000A2F7 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				934C046F1F049DA700659D9E /* BMHomeViewController.h */,
+				934C04701F049DA700659D9E /* BMHomeViewController.m */,
+				934C04711F049DA700659D9E /* BMHomeViewController.storyboard */,
+				934C04741F049E5B00659D9E /* BMAnnotationViewController.h */,
+				934C04751F049E5B00659D9E /* BMAnnotationViewController.m */,
+				934C04761F049E5B00659D9E /* BMAnnotationViewController.storyboard */,
+				934C04791F049E6E00659D9E /* BMPathViewController.h */,
+				934C047A1F049E6E00659D9E /* BMPathViewController.m */,
+				934C047B1F049E6E00659D9E /* BMPathViewController.storyboard */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		93ADA9541F0490B90000A2F7 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		93ADA9551F0490B90000A2F7 /* modules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = modules;
+			sourceTree = "<group>";
+		};
+		93ADA9561F0490B90000A2F7 /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		93ADA9571F0490B90000A2F7 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				93ADA9581F0490B90000A2F7 /* APIAddress.h */,
+				93ADA9591F0490B90000A2F7 /* AppConfig.h */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+		93ADA95A1F0490B90000A2F7 /* ext */ = {
+			isa = PBXGroup;
+			children = (
+				93ADA95B1F0490B90000A2F7 /* GGUtil.h */,
+				93ADA95C1F0490B90000A2F7 /* GGUtil.m */,
+				93ADA95E1F0490B90000A2F7 /* UIViewController+NavItem.h */,
+				93ADA95F1F0490B90000A2F7 /* UIViewController+NavItem.m */,
+			);
+			name = ext;
+			sourceTree = "<group>";
+		};
+		93ADA9611F0490B90000A2F7 /* i18n */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = i18n;
+			sourceTree = "<group>";
+		};
+		93ADA9651F0490B90000A2F7 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				93ADA96C1F0490B90000A2F7 /* images.xcassets */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		93ADA9661F0490B90000A2F7 /* vendors */ = {
+			isa = PBXGroup;
+			children = (
+				93ADA9751F0490ED0000A2F7 /* GGCommonKit */,
+				93ADA9671F0490B90000A2F7 /* constant */,
+				93ADA9681F0490B90000A2F7 /* modifiable */,
+			);
+			path = vendors;
+			sourceTree = "<group>";
+		};
+		93ADA9671F0490B90000A2F7 /* constant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = constant;
+			sourceTree = "<group>";
+		};
+		93ADA9681F0490B90000A2F7 /* modifiable */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = modifiable;
+			sourceTree = "<group>";
+		};
+		93ADA9691F0490B90000A2F7 /* dylib */ = {
+			isa = PBXGroup;
+			children = (
+				93ADA96A1F0490B90000A2F7 /* libsqlite3.dylib */,
+			);
+			name = dylib;
+			sourceTree = "<group>";
+		};
+		93ADA9751F0490ED0000A2F7 /* GGCommonKit */ = {
+			isa = PBXGroup;
+			children = (
+				93ADA9761F0490ED0000A2F7 /* Extensions */,
+				93ADA98D1F0490ED0000A2F7 /* GGCommonKit.h */,
+				93ADA98E1F0490ED0000A2F7 /* GGCommonKitMacros */,
+				93ADA9901F0490ED0000A2F7 /* Util */,
+			);
+			path = GGCommonKit;
+			sourceTree = "<group>";
+		};
+		93ADA9761F0490ED0000A2F7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				93ADA9771F0490ED0000A2F7 /* NSObject+AutoDescription.h */,
+				93ADA9781F0490ED0000A2F7 /* NSObject+AutoDescription.m */,
+				93ADA9791F0490ED0000A2F7 /* UIActionSheet+Blocks.h */,
+				93ADA97A1F0490ED0000A2F7 /* UIActionSheet+Blocks.m */,
+				93ADA97B1F0490ED0000A2F7 /* UIAlertView+Blocks.h */,
+				93ADA97C1F0490ED0000A2F7 /* UIAlertView+Blocks.m */,
+				93ADA97D1F0490ED0000A2F7 /* UIButton+ActivityIndicatorView.h */,
+				93ADA97E1F0490ED0000A2F7 /* UIButton+ActivityIndicatorView.m */,
+				93ADA97F1F0490ED0000A2F7 /* UILabel+FormattedText.h */,
+				93ADA9801F0490ED0000A2F7 /* UILabel+FormattedText.m */,
+				93ADA9811F0490ED0000A2F7 /* UIStoryboard+Addition.h */,
+				93ADA9821F0490ED0000A2F7 /* UIStoryboard+Addition.m */,
+				93ADA9831F0490ED0000A2F7 /* UITableViewCell+Utils.h */,
+				93ADA9841F0490ED0000A2F7 /* UITableViewCell+Utils.m */,
+				93ADA9851F0490ED0000A2F7 /* UIView+Create.h */,
+				93ADA9861F0490ED0000A2F7 /* UIView+Create.m */,
+				93ADA9871F0490ED0000A2F7 /* UIView+LayoutConstraintHelper.h */,
+				93ADA9881F0490ED0000A2F7 /* UIView+LayoutConstraintHelper.m */,
+				93ADA9891F0490ED0000A2F7 /* UIView+Utils.h */,
+				93ADA98A1F0490ED0000A2F7 /* UIView+Utils.m */,
+				93ADA98B1F0490ED0000A2F7 /* UIViewController+Create.h */,
+				93ADA98C1F0490ED0000A2F7 /* UIViewController+Create.m */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		93ADA98E1F0490ED0000A2F7 /* GGCommonKitMacros */ = {
+			isa = PBXGroup;
+			children = (
+				93ADA98F1F0490ED0000A2F7 /* GGCommonKitMacros.h */,
+			);
+			path = GGCommonKitMacros;
+			sourceTree = "<group>";
+		};
+		93ADA9901F0490ED0000A2F7 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				93ADA9911F0490ED0000A2F7 /* ArrayUtils.h */,
+				93ADA9921F0490ED0000A2F7 /* ArrayUtils.m */,
+				93ADA9931F0490ED0000A2F7 /* AutorotateNavigationController.h */,
+				93ADA9941F0490ED0000A2F7 /* AutorotateNavigationController.m */,
+				93ADA9951F0490ED0000A2F7 /* GGDatePickerHelper.h */,
+				93ADA9961F0490ED0000A2F7 /* GGDatePickerHelper.m */,
+				93ADA9971F0490ED0000A2F7 /* GGImagePickerHelper.h */,
+				93ADA9981F0490ED0000A2F7 /* GGImagePickerHelper.m */,
+				93ADA9991F0490ED0000A2F7 /* GGNavigationController.h */,
+				93ADA99A1F0490ED0000A2F7 /* GGNavigationController.m */,
+				93ADA99B1F0490ED0000A2F7 /* PortraitNavigationController.h */,
+				93ADA99C1F0490ED0000A2F7 /* PortraitNavigationController.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		93ADA93D1F0490B90000A2F7 /* BaiMapEagleEye */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93ADA9711F0490B90000A2F7 /* Build configuration list for PBXNativeTarget "BaiMapEagleEye" */;
+			buildPhases = (
+				10EEEB50EACFBC390B961A40 /* [CP] Check Pods Manifest.lock */,
+				93ADA93A1F0490B90000A2F7 /* Sources */,
+				93ADA93B1F0490B90000A2F7 /* Frameworks */,
+				93ADA93C1F0490B90000A2F7 /* Resources */,
+				A268EA069995F0A86124EB4E /* [CP] Embed Pods Frameworks */,
+				E009A377C8D80AACAD83C8F2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BaiMapEagleEye;
+			productName = BaiMapEagleEye;
+			productReference = 93ADA93E1F0490B90000A2F7 /* BaiMapEagleEye.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		93ADA9361F0490B90000A2F7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BM;
+				LastUpgradeCheck = 0830;
+				TargetAttributes = {
+					93ADA93D1F0490B90000A2F7 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 93ADA9391F0490B90000A2F7 /* Build configuration list for PBXProject "BaiMapEagleEye" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 93ADA9351F0490B90000A2F7;
+			productRefGroup = 93ADA93F1F0490B90000A2F7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93ADA93D1F0490B90000A2F7 /* BaiMapEagleEye */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93ADA93C1F0490B90000A2F7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				934C04731F049DA700659D9E /* BMHomeViewController.storyboard in Resources */,
+				934C047D1F049E6E00659D9E /* BMPathViewController.storyboard in Resources */,
+				934C04781F049E5B00659D9E /* BMAnnotationViewController.storyboard in Resources */,
+				93ADA9471F0490B90000A2F7 /* Podfile in Resources */,
+				93ADA96D1F0490B90000A2F7 /* images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		10EEEB50EACFBC390B961A40 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A268EA069995F0A86124EB4E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BaiMapEagleEye/Pods-BaiMapEagleEye-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E009A377C8D80AACAD83C8F2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BaiMapEagleEye/Pods-BaiMapEagleEye-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93ADA93A1F0490B90000A2F7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93ADA9A51F0490ED0000A2F7 /* UIView+LayoutConstraintHelper.m in Sources */,
+				934C04771F049E5B00659D9E /* BMAnnotationViewController.m in Sources */,
+				93ADA9AC1F0490ED0000A2F7 /* GGNavigationController.m in Sources */,
+				93ADA9641F0490B90000A2F7 /* AppDelegate.m in Sources */,
+				93ADA99E1F0490ED0000A2F7 /* UIActionSheet+Blocks.m in Sources */,
+				93ADA9A01F0490ED0000A2F7 /* UIButton+ActivityIndicatorView.m in Sources */,
+				93ADA9AD1F0490ED0000A2F7 /* PortraitNavigationController.m in Sources */,
+				93ADA9A91F0490ED0000A2F7 /* AutorotateNavigationController.m in Sources */,
+				93ADA9A11F0490ED0000A2F7 /* UILabel+FormattedText.m in Sources */,
+				93ADA9A21F0490ED0000A2F7 /* UIStoryboard+Addition.m in Sources */,
+				93ADA9451F0490B90000A2F7 /* main.m in Sources */,
+				93ADA9A81F0490ED0000A2F7 /* ArrayUtils.m in Sources */,
+				934C047C1F049E6E00659D9E /* BMPathViewController.m in Sources */,
+				93ADA9A41F0490ED0000A2F7 /* UIView+Create.m in Sources */,
+				93ADA9A61F0490ED0000A2F7 /* UIView+Utils.m in Sources */,
+				93ADA99D1F0490ED0000A2F7 /* NSObject+AutoDescription.m in Sources */,
+				934C04721F049DA700659D9E /* BMHomeViewController.m in Sources */,
+				93ADA9A71F0490ED0000A2F7 /* UIViewController+Create.m in Sources */,
+				93ADA9AA1F0490ED0000A2F7 /* GGDatePickerHelper.m in Sources */,
+				93ADA99F1F0490ED0000A2F7 /* UIAlertView+Blocks.m in Sources */,
+				93ADA95D1F0490B90000A2F7 /* GGUtil.m in Sources */,
+				93ADA9A31F0490ED0000A2F7 /* UITableViewCell+Utils.m in Sources */,
+				93ADA9601F0490B90000A2F7 /* UIViewController+NavItem.m in Sources */,
+				93ADA9AB1F0490ED0000A2F7 /* GGImagePickerHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		93ADA96E1F0490B90000A2F7 /* App Store */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "BaiMapEagleEye/Supporting Files/Entitlements.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)\"/**";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = APP_STORE;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)\"/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "\"$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)\"/**";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "App Store";
+		};
+		93ADA96F1F0490B90000A2F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "BaiMapEagleEye/Supporting Files/Entitlements.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		93ADA9701F0490B90000A2F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = "BaiMapEagleEye/Supporting Files/Entitlements.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)\"/**";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = AD_HOC;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)\"/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "\"$(BUILD_DIR)/Release$(EFFECTIVE_PLATFORM_NAME)\"/**";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		93ADA9721F0490B90000A2F7 /* App Store */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 399C539059DCBC232A29D11D /* Pods-BaiMapEagleEye.app store.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BaiMapEagleEye/Supporting Files/Prefix.pch";
+				INFOPLIST_FILE = "BaiMapEagleEye/Supporting Files/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eagleeye.iphone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = "App Store";
+		};
+		93ADA9731F0490B90000A2F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1833DE61645C671736942713 /* Pods-BaiMapEagleEye.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BaiMapEagleEye/Supporting Files/Prefix.pch";
+				INFOPLIST_FILE = "BaiMapEagleEye/Supporting Files/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eagleeye.iphone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Debug;
+		};
+		93ADA9741F0490B90000A2F7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 293DCF466844CA06B122E073 /* Pods-BaiMapEagleEye.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = "";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "BaiMapEagleEye/Supporting Files/Prefix.pch";
+				INFOPLIST_FILE = "BaiMapEagleEye/Supporting Files/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eagleeye.iphone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93ADA9391F0490B90000A2F7 /* Build configuration list for PBXProject "BaiMapEagleEye" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93ADA96E1F0490B90000A2F7 /* App Store */,
+				93ADA96F1F0490B90000A2F7 /* Debug */,
+				93ADA9701F0490B90000A2F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93ADA9711F0490B90000A2F7 /* Build configuration list for PBXNativeTarget "BaiMapEagleEye" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93ADA9721F0490B90000A2F7 /* App Store */,
+				93ADA9731F0490B90000A2F7 /* Debug */,
+				93ADA9741F0490B90000A2F7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 93ADA9361F0490B90000A2F7 /* Project object */;
+}
