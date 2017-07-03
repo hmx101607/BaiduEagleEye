@@ -3,6 +3,6 @@
 
 APIHost = 120.25.58.158:8088
 QiNiuHost = 0
-BundleIdentifier = com.eagleeye.iphone
-ProductDisplayName = xxxx
+BundleIdentifier = com.dossen.app
+ProductDisplayName = 百度鹰眼
 

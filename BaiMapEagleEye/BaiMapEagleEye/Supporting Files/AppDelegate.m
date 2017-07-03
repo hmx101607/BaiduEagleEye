@@ -10,9 +10,14 @@
 #import <FLEXManager.h>
 #import <AFNetworkReachabilityManager.h>
 #import "BMHomeViewController.h"
+#import <BaiduMapAPI_Base/BMKMapManager.h>
+
 
 @interface AppDelegate()
-
+<
+BMKGeneralDelegate
+>
+@property (strong, nonatomic) BMKMapManager *mapManager;
 
 @end
 
@@ -28,8 +33,45 @@
     [self addFlexTapGestureIfNeed];
     [self startNotifierNetWork];
     [self showBuildsNumber];
+    
+    [self configAMap];
+
     return YES;
 }
+
+- (void)configAMap
+{
+    if (!self.mapManager) {
+        self.mapManager = [[BMKMapManager alloc]init];
+    }
+    // 如果要关注网络及授权验证事件，请设定     generalDelegate参数
+    BOOL ret = [self.mapManager start:@"p28qGatn6SuGRQwOZAktXM3StRzSREP5"  generalDelegate:self];
+    [BMKMapManager logEnable:NO module:BMKMapModuleTile];
+    if (!ret) {
+        DLog(@"manager start failed!");
+    }
+}
+
+- (void)onGetNetworkState:(int)iError
+{
+    if (0 == iError) {
+        DLog(@"联网成功");
+    }
+    else{
+        DLog(@"onGetNetworkState %d",iError);
+    }
+}
+
+- (void)onGetPermissionState:(int)iError
+{
+    if (0 == iError) {
+        DLog(@"授权成功");
+    }
+    else {
+        DLog(@"onGetPermissionState %d",iError);
+    }
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

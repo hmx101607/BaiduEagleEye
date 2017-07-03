@@ -10,10 +10,9 @@ pod 'NYXImagesKit'
 pod 'MBProgressHUD'
 pod 'SDWebImage'
 pod 'uicontrol-blocks'
-pod 'INTULocationManager'
+#pod 'INTULocationManager'
 pod 'YYKit'
 pod 'MLeaksFinder'
 pod 'BaiduMapKit'
 
 end
-

@@ -17,7 +17,6 @@ PODS:
   - BaiduMapKit (3.3.1)
   - FBRetainCycleDetector (0.1.3)
   - FLEX (2.4.0)
-  - INTULocationManager (4.2.0)
   - MBProgressHUD (1.0.0)
   - MLeaksFinder (0.2.1):
     - FBRetainCycleDetector
@@ -35,7 +34,6 @@ DEPENDENCIES:
   - AFNetworking
   - BaiduMapKit
   - FLEX
-  - INTULocationManager
   - MBProgressHUD
   - MLeaksFinder
   - NYXImagesKit
@@ -49,7 +47,6 @@ SPEC CHECKSUMS:
   BaiduMapKit: 9e8ff80bbcfb8f96b4a58b2844d728590dac90ca
   FBRetainCycleDetector: f0c7b290bf48ae77f6ae060843ce34ae341781eb
   FLEX: bd1a39e55b56bb413b6f1b34b3c10a0dc44ef079
-  INTULocationManager: 73f8254b3d05c897c56bb13c190e5b7c648c0998
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MLeaksFinder: 0850e2f2abc7227adc4d4e2d1992b431264eb4d5
   NYXImagesKit: 8163e3335a40eaa173ca5bbbf81fafb57d3947eb
@@ -58,6 +55,6 @@ SPEC CHECKSUMS:
   uicontrol-blocks: 426f75a0bceef694415f2914eec07619adc9db02
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: e46c1d3b185f05936f0d7f16cbf6a2691a3b2b20
+PODFILE CHECKSUM: 8a90f6d3399997abc43edd9df2e7defe1d7e0b15
 
 COCOAPODS: 1.2.0

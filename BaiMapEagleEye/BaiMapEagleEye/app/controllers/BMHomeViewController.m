@@ -10,6 +10,10 @@
 #import "BMAnnotationViewController.h"
 #import "BMPathViewController.h"
 
+static NSUInteger serviceID = 144550;
+static NSString *AK = @"p28qGatn6SuGRQwOZAktXM3StRzSREP5";
+static NSString *entityName = @"河长";
+
 @interface BMHomeViewController ()
 
 @end
