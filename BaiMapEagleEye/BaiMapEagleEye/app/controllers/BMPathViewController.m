@@ -7,11 +7,9 @@
 //
 
 #import "BMPathViewController.h"
-#import "BaiduTraceSDK/BaiduTraceSDK.h"
-#import <BaiduMapAPI_Map/BMKMapComponent.h>
-#import <BaiduMapAPI_Location/BMKLocationComponent.h>
 #import "DateUtil.h"
 #import "BMPoint.h"
+#import "BMMapView.h"
 
 static NSUInteger serviceID = 144550;
 static NSString *AK = @"p28qGatn6SuGRQwOZAktXM3StRzSREP5";
@@ -21,16 +19,13 @@ static NSString *entityName = @"hezhang1";
 @interface BMPathViewController ()
 <
 BTKTraceDelegate,
-BTKTrackDelegate,
-BMKMapViewDelegate,
-BMKLocationServiceDelegate
+BTKTrackDelegate
 >
 
 @property (weak, nonatomic) IBOutlet UIView *baseView;
+
 /** 地图 */
-@property (strong, nonatomic) BMKMapView* mapView;
-/**  */
-@property (strong, nonatomic) BMKLocationService *locService;
+@property (strong, nonatomic) BMMapView *mapView;
 /**  */
 @property (strong, nonatomic) NSMutableArray *pointArray;
 /**  */
@@ -41,13 +36,13 @@ BMKLocationServiceDelegate
 @implementation BMPathViewController
 
 - (void)viewWillAppear:(BOOL)animated {
-    [self.mapView viewWillAppear];
-    self.mapView.delegate = self;
+    [super viewWillAppear:animated];
+    [self.mapView mapViewWillAppear];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
-    [self.mapView viewWillDisappear];
-    self.mapView.delegate = nil;
+    [super viewWillDisappear:animated];
+    [self.mapView mapViewWillDisappear];
 }
 
 - (void)viewDidLoad
@@ -55,78 +50,10 @@ BMKLocationServiceDelegate
     [super viewDidLoad];
     [self configEagleEyeService];
     
-    BMKMapView *mapView = [[BMKMapView alloc] init];
-    [mapView setMapType:BMKMapTypeStandard];
+    BMMapView *mapView = [[BMMapView alloc] init];
     [self.baseView addSubview:mapView];
     [mapView autoPinEdgesToSuperviewMargins];
-    mapView.delegate = self;
-    mapView.zoomEnabledWithTap = NO;
-    mapView.rotateEnabled = NO;
-    [self.mapView setBackgroundColor:[UIColor whiteColor]];
-    BMKMapStatus *status = self.mapView.getMapStatus;
-    status.fLevel = 8.f;
-    [self.mapView setMapStatus:status withAnimation:YES];
     self.mapView = mapView;
-
-    self.locService = [[BMKLocationService alloc]init];
-    self.locService.delegate = self;
-    //启动LocationService
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.locService startUserLocationService];
-    });
-}
-
-//处理方向变更信息
-- (void)didUpdateUserHeading:(BMKUserLocation *)userLocation
-{
-    //NSLog(@"heading is %@",userLocation.heading);
-    self.mapView.showsUserLocation = YES;//显示定位图层
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.mapView updateLocationData:userLocation];
-    });
-    self.mapView.centerCoordinate = userLocation.location.coordinate;
-}
-//处理位置坐标更新
-- (void)didUpdateBMKUserLocation:(BMKUserLocation *)userLocation
-{
-    //NSLog(@"didUpdateUserLocation lat %f,long %f",userLocation.location.coordinate.latitude,userLocation.location.coordinate.longitude);
-    self.mapView.showsUserLocation = YES;//显示定位图层
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [self.mapView updateLocationData:userLocation];
-    });
-    self.mapView.centerCoordinate = userLocation.location.coordinate;
-
-    
-//    BMCustomAnnotation *annotation = [[BMCustomAnnotation alloc] init];
-//    CLLocationCoordinate2D coordinate = userLocation.location.coordinate;
-//    annotation.coordinate = CLLocationCoordinate2DMake(coordinate.latitude + 0.1, coordinate.longitude + 0.1);
-//    [self.mapView addAnnotation:annotation];
-//    
-//    BMCustomAnnotation *annotation2 = [[BMCustomAnnotation alloc] init];
-//    annotation2.coordinate = CLLocationCoordinate2DMake(coordinate.latitude + 0.3, coordinate.longitude + 0.3);
-//    [self.mapView addAnnotation:annotation2];
-
-}
-
-- (void)didFailToLocateUserWithError:(NSError *)error {
-    DLog(@"error : %@", error);
-}
-
-//添加标注代理
-- (BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation
-{
-    NSString *annotationViewID = @"DCAddressAnnotationView";
-    BMKPinAnnotationView *annotationView = nil;
-    if (annotationView == nil) {
-        annotationView = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:annotationViewID];
-        annotationView.animatesDrop = YES;
-    }
-    return annotationView;
-    
-//    BMKPinAnnotationView *newAnnotationView = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"myAnnotation"];
-//    newAnnotationView.pinColor = BMKPinAnnotationColorPurple;
-//    newAnnotationView.animatesDrop = YES;// 设置该标注点动画显示
-//    return newAnnotationView;
 }
 
 #pragma mark - 配置地图服务
@@ -174,7 +101,6 @@ BMKLocationServiceDelegate
         [[BTKAction sharedInstance] stopGather:self];
     });
     //停止定时器，并去查询此次轨迹的所有点，并绘制完整的轨迹
-
 }
 
 #pragma mark - service轨迹服务 回调
@@ -223,6 +149,8 @@ BMKLocationServiceDelegate
 }
 
 - (void)queryHitstoryTrack {
+    [self.mapView stopUserLocationService];
+    
     NSUInteger endTime = [[NSDate date] timeIntervalSince1970];
     BTKQueryTrackProcessOption *option = [[BTKQueryTrackProcessOption alloc] init];
     option.denoise = FALSE;
@@ -230,7 +158,7 @@ BMKLocationServiceDelegate
     option.mapMatch = FALSE;
     option.radiusThreshold = 55;
     
-    BTKQueryHistoryTrackRequest *request = [[BTKQueryHistoryTrackRequest alloc] initWithEntityName:self.entityName startTime:endTime - 84400 endTime:endTime isProcessed:TRUE processOption:option supplementMode:BTK_TRACK_PROCESS_OPTION_SUPPLEMENT_MODE_WALKING outputCoordType:BTK_COORDTYPE_BD09LL sortType:BTK_TRACK_SORT_TYPE_ASC pageIndex:1 pageSize:100 serviceID:serviceID tag:13];
+    BTKQueryHistoryTrackRequest *request = [[BTKQueryHistoryTrackRequest alloc] initWithEntityName:@"hezhang11499169032" startTime:endTime - 84400 endTime:endTime isProcessed:TRUE processOption:option supplementMode:BTK_TRACK_PROCESS_OPTION_SUPPLEMENT_MODE_WALKING outputCoordType:BTK_COORDTYPE_BD09LL sortType:BTK_TRACK_SORT_TYPE_ASC pageIndex:1 pageSize:100 serviceID:serviceID tag:13];
     [[BTKTrackAction sharedInstance] queryHistoryTrackWith:request delegate:self];
 }
 
@@ -271,8 +199,6 @@ BMKLocationServiceDelegate
     BMPoint *endPointModel = [BMPoint modelWithJSON:endPoint];
     NSArray *pointsModel = [NSArray modelArrayWithClass:[BMPoint class] json:points];
     
-    
-    [self.mapView removeAnnotations:self.pointArray];
     [self.pointArray removeAllObjects];
     if (startPointModel) {
         [self.pointArray addObject:[startPointModel pointToAnnotation]];
@@ -284,15 +210,8 @@ BMKLocationServiceDelegate
         [self.pointArray addObject:[endPointModel pointToAnnotation]];
     }
     dispatch_async(dispatch_get_main_queue(), ^{
-        [self.mapView addAnnotations:self.pointArray];
+        [self.mapView updateAnnotationViewWithPointArray:self.pointArray];
     });
-}
-
-- (NSMutableArray *)pointArray {
-    if (!_pointArray) {
-        _pointArray = [NSMutableArray array];
-    }
-    return _pointArray;
 }
 
 //SDK在每个采集周期会回调改方法，将其返回值作为当前采集周期采集的轨迹点的自定义字段的值
@@ -302,6 +221,12 @@ BMKLocationServiceDelegate
     return [NSDictionary dictionaryWithDictionary:customData];
 }
 
+- (NSMutableArray *)pointArray {
+    if (!_pointArray) {
+        _pointArray = [NSMutableArray array];
+    }
+    return _pointArray;
+}
 
 - (void)didReceiveMemoryWarning
 {

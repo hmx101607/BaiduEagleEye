@@ -16,13 +16,20 @@
 		934C047D1F049E6E00659D9E /* BMPathViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 934C047B1F049E6E00659D9E /* BMPathViewController.storyboard */; };
 		934C047F1F04AB9400659D9E /* BaiduTraceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 934C047E1F04AB9400659D9E /* BaiduTraceSDK.framework */; };
 		934C04811F04E51C00659D9E /* BaiduTraceSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 934C047E1F04AB9400659D9E /* BaiduTraceSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		934C04851F04ED0500659D9E /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 934C04841F04ED0500659D9E /* DateUtil.m */; };
 		934C04881F04FF4000659D9E /* BMCustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 934C04871F04FF4000659D9E /* BMCustomAnnotation.m */; };
 		934C048B1F0500B300659D9E /* BMPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 934C048A1F0500B300659D9E /* BMPoint.m */; };
+		939E56401F0B24B4007ED24D /* GGUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 939E563D1F0B24B4007ED24D /* GGUtil.m */; };
+		939E56411F0B24B4007ED24D /* UIViewController+NavItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 939E563F1F0B24B4007ED24D /* UIViewController+NavItem.m */; };
+		939E564C1F0B24FF007ED24D /* AS.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 939E56451F0B24FF007ED24D /* AS.xcconfig */; };
+		939E564D1F0B24FF007ED24D /* ASPrivate.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 939E56471F0B24FF007ED24D /* ASPrivate.xcconfig */; };
+		939E564E1F0B24FF007ED24D /* ProductionPrivate.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 939E56481F0B24FF007ED24D /* ProductionPrivate.xcconfig */; };
+		939E564F1F0B24FF007ED24D /* StagingPrivate.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 939E56491F0B24FF007ED24D /* StagingPrivate.xcconfig */; };
+		939E56501F0B24FF007ED24D /* ProductionInhouse.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 939E564A1F0B24FF007ED24D /* ProductionInhouse.xcconfig */; };
+		939E56511F0B24FF007ED24D /* Staging.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 939E564B1F0B24FF007ED24D /* Staging.xcconfig */; };
+		939E56541F0B2523007ED24D /* BMMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 939E56531F0B2523007ED24D /* BMMapView.m */; };
+		939E56571F0B25B4007ED24D /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 939E56561F0B25B4007ED24D /* DateUtil.m */; };
 		93ADA9451F0490B90000A2F7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ADA9441F0490B90000A2F7 /* main.m */; };
 		93ADA9471F0490B90000A2F7 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 93ADA9461F0490B90000A2F7 /* Podfile */; };
-		93ADA95D1F0490B90000A2F7 /* GGUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ADA95C1F0490B90000A2F7 /* GGUtil.m */; };
-		93ADA9601F0490B90000A2F7 /* UIViewController+NavItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ADA95F1F0490B90000A2F7 /* UIViewController+NavItem.m */; };
 		93ADA9641F0490B90000A2F7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ADA9631F0490B90000A2F7 /* AppDelegate.m */; };
 		93ADA96B1F0490B90000A2F7 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 93ADA96A1F0490B90000A2F7 /* libsqlite3.dylib */; };
 		93ADA96D1F0490B90000A2F7 /* images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93ADA96C1F0490B90000A2F7 /* images.xcassets */; };
@@ -73,30 +80,32 @@
 		934C047A1F049E6E00659D9E /* BMPathViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMPathViewController.m; sourceTree = "<group>"; };
 		934C047B1F049E6E00659D9E /* BMPathViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BMPathViewController.storyboard; sourceTree = "<group>"; };
 		934C047E1F04AB9400659D9E /* BaiduTraceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduTraceSDK.framework; sourceTree = "<group>"; };
-		934C04831F04ED0500659D9E /* DateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtil.h; sourceTree = "<group>"; };
-		934C04841F04ED0500659D9E /* DateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtil.m; sourceTree = "<group>"; };
 		934C04861F04FF4000659D9E /* BMCustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMCustomAnnotation.h; sourceTree = "<group>"; };
 		934C04871F04FF4000659D9E /* BMCustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCustomAnnotation.m; sourceTree = "<group>"; };
 		934C04891F0500B300659D9E /* BMPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMPoint.h; sourceTree = "<group>"; };
 		934C048A1F0500B300659D9E /* BMPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMPoint.m; sourceTree = "<group>"; };
+		939E563C1F0B24B4007ED24D /* GGUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGUtil.h; sourceTree = "<group>"; };
+		939E563D1F0B24B4007ED24D /* GGUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGUtil.m; sourceTree = "<group>"; };
+		939E563E1F0B24B4007ED24D /* UIViewController+NavItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NavItem.h"; sourceTree = "<group>"; };
+		939E563F1F0B24B4007ED24D /* UIViewController+NavItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NavItem.m"; sourceTree = "<group>"; };
+		939E56451F0B24FF007ED24D /* AS.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = AS.xcconfig; sourceTree = "<group>"; };
+		939E56471F0B24FF007ED24D /* ASPrivate.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ASPrivate.xcconfig; sourceTree = "<group>"; };
+		939E56481F0B24FF007ED24D /* ProductionPrivate.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ProductionPrivate.xcconfig; sourceTree = "<group>"; };
+		939E56491F0B24FF007ED24D /* StagingPrivate.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = StagingPrivate.xcconfig; sourceTree = "<group>"; };
+		939E564A1F0B24FF007ED24D /* ProductionInhouse.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = ProductionInhouse.xcconfig; sourceTree = "<group>"; };
+		939E564B1F0B24FF007ED24D /* Staging.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Staging.xcconfig; sourceTree = "<group>"; };
+		939E56521F0B2523007ED24D /* BMMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMMapView.h; sourceTree = "<group>"; };
+		939E56531F0B2523007ED24D /* BMMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMMapView.m; sourceTree = "<group>"; };
+		939E56551F0B25B4007ED24D /* DateUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtil.h; sourceTree = "<group>"; };
+		939E56561F0B25B4007ED24D /* DateUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtil.m; sourceTree = "<group>"; };
 		93ADA93E1F0490B90000A2F7 /* BaiMapEagleEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaiMapEagleEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93ADA9421F0490B90000A2F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93ADA9431F0490B90000A2F7 /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		93ADA9441F0490B90000A2F7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		93ADA9461F0490B90000A2F7 /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; name = Podfile; path = ../../Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		93ADA9491F0490B90000A2F7 /* Staging.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Staging.xcconfig; path = Xcconfig/Staging.xcconfig; sourceTree = "<group>"; };
-		93ADA94A1F0490B90000A2F7 /* ProductionInhouse.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = ProductionInhouse.xcconfig; path = Xcconfig/ProductionInhouse.xcconfig; sourceTree = "<group>"; };
-		93ADA94B1F0490B90000A2F7 /* AS.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = AS.xcconfig; path = Xcconfig/AS.xcconfig; sourceTree = "<group>"; };
-		93ADA94D1F0490B90000A2F7 /* StagingPrivate.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = StagingPrivate.xcconfig; path = Xcconfig/InsideConfig/StagingPrivate.xcconfig; sourceTree = "<group>"; };
-		93ADA94E1F0490B90000A2F7 /* ProductionPrivate.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = ProductionPrivate.xcconfig; path = Xcconfig/InsideConfig/ProductionPrivate.xcconfig; sourceTree = "<group>"; };
-		93ADA94F1F0490B90000A2F7 /* ASPrivate.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = ASPrivate.xcconfig; path = Xcconfig/InsideConfig/ASPrivate.xcconfig; sourceTree = "<group>"; };
 		93ADA9501F0490B90000A2F7 /* Entitlements.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Entitlements.entitlements; sourceTree = "<group>"; };
 		93ADA9581F0490B90000A2F7 /* APIAddress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIAddress.h; sourceTree = "<group>"; };
 		93ADA9591F0490B90000A2F7 /* AppConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConfig.h; sourceTree = "<group>"; };
-		93ADA95B1F0490B90000A2F7 /* GGUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GGUtil.h; path = ext/GGUtil.h; sourceTree = "<group>"; };
-		93ADA95C1F0490B90000A2F7 /* GGUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GGUtil.m; path = ext/GGUtil.m; sourceTree = "<group>"; };
-		93ADA95E1F0490B90000A2F7 /* UIViewController+NavItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIViewController+NavItem.h"; path = "ext/UIViewController+NavItem.h"; sourceTree = "<group>"; };
-		93ADA95F1F0490B90000A2F7 /* UIViewController+NavItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+NavItem.m"; path = "ext/UIViewController+NavItem.m"; sourceTree = "<group>"; };
 		93ADA9621F0490B90000A2F7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		93ADA9631F0490B90000A2F7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		93ADA96A1F0490B90000A2F7 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = /usr/lib/libsqlite3.dylib; sourceTree = DEVELOPER_DIR; };
@@ -173,6 +182,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		939E56461F0B24FF007ED24D /* InsideConfig */ = {
+			isa = PBXGroup;
+			children = (
+				939E56471F0B24FF007ED24D /* ASPrivate.xcconfig */,
+				939E56481F0B24FF007ED24D /* ProductionPrivate.xcconfig */,
+				939E56491F0B24FF007ED24D /* StagingPrivate.xcconfig */,
+			);
+			path = InsideConfig;
+			sourceTree = "<group>";
+		};
 		93ADA9351F0490B90000A2F7 = {
 			isa = PBXGroup;
 			children = (
@@ -224,22 +243,12 @@
 		93ADA9481F0490B90000A2F7 /* Xcconfig */ = {
 			isa = PBXGroup;
 			children = (
-				93ADA9491F0490B90000A2F7 /* Staging.xcconfig */,
-				93ADA94A1F0490B90000A2F7 /* ProductionInhouse.xcconfig */,
-				93ADA94B1F0490B90000A2F7 /* AS.xcconfig */,
-				93ADA94C1F0490B90000A2F7 /* InsideConfig */,
+				939E56451F0B24FF007ED24D /* AS.xcconfig */,
+				939E56461F0B24FF007ED24D /* InsideConfig */,
+				939E564A1F0B24FF007ED24D /* ProductionInhouse.xcconfig */,
+				939E564B1F0B24FF007ED24D /* Staging.xcconfig */,
 			);
-			name = Xcconfig;
-			sourceTree = "<group>";
-		};
-		93ADA94C1F0490B90000A2F7 /* InsideConfig */ = {
-			isa = PBXGroup;
-			children = (
-				93ADA94D1F0490B90000A2F7 /* StagingPrivate.xcconfig */,
-				93ADA94E1F0490B90000A2F7 /* ProductionPrivate.xcconfig */,
-				93ADA94F1F0490B90000A2F7 /* ASPrivate.xcconfig */,
-			);
-			name = InsideConfig;
+			path = Xcconfig;
 			sourceTree = "<group>";
 		};
 		93ADA9511F0490B90000A2F7 /* app */ = {
@@ -298,8 +307,10 @@
 		93ADA9561F0490B90000A2F7 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				939E56521F0B2523007ED24D /* BMMapView.h */,
+				939E56531F0B2523007ED24D /* BMMapView.m */,
 			);
-			name = views;
+			path = views;
 			sourceTree = "<group>";
 		};
 		93ADA9571F0490B90000A2F7 /* config */ = {
@@ -314,14 +325,14 @@
 		93ADA95A1F0490B90000A2F7 /* ext */ = {
 			isa = PBXGroup;
 			children = (
-				934C04831F04ED0500659D9E /* DateUtil.h */,
-				934C04841F04ED0500659D9E /* DateUtil.m */,
-				93ADA95B1F0490B90000A2F7 /* GGUtil.h */,
-				93ADA95C1F0490B90000A2F7 /* GGUtil.m */,
-				93ADA95E1F0490B90000A2F7 /* UIViewController+NavItem.h */,
-				93ADA95F1F0490B90000A2F7 /* UIViewController+NavItem.m */,
+				939E56551F0B25B4007ED24D /* DateUtil.h */,
+				939E56561F0B25B4007ED24D /* DateUtil.m */,
+				939E563C1F0B24B4007ED24D /* GGUtil.h */,
+				939E563D1F0B24B4007ED24D /* GGUtil.m */,
+				939E563E1F0B24B4007ED24D /* UIViewController+NavItem.h */,
+				939E563F1F0B24B4007ED24D /* UIViewController+NavItem.m */,
 			);
-			name = ext;
+			path = ext;
 			sourceTree = "<group>";
 		};
 		93ADA9611F0490B90000A2F7 /* i18n */ = {
@@ -500,10 +511,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				939E564D1F0B24FF007ED24D /* ASPrivate.xcconfig in Resources */,
+				939E56501F0B24FF007ED24D /* ProductionInhouse.xcconfig in Resources */,
 				934C04731F049DA700659D9E /* BMHomeViewController.storyboard in Resources */,
+				939E56511F0B24FF007ED24D /* Staging.xcconfig in Resources */,
 				934C047D1F049E6E00659D9E /* BMPathViewController.storyboard in Resources */,
+				939E564E1F0B24FF007ED24D /* ProductionPrivate.xcconfig in Resources */,
+				939E564F1F0B24FF007ED24D /* StagingPrivate.xcconfig in Resources */,
 				934C04781F049E5B00659D9E /* BMAnnotationViewController.storyboard in Resources */,
 				93ADA9471F0490B90000A2F7 /* Podfile in Resources */,
+				939E564C1F0B24FF007ED24D /* AS.xcconfig in Resources */,
 				93ADA96D1F0490B90000A2F7 /* images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -569,26 +586,27 @@
 				93ADA9641F0490B90000A2F7 /* AppDelegate.m in Sources */,
 				93ADA99E1F0490ED0000A2F7 /* UIActionSheet+Blocks.m in Sources */,
 				93ADA9A01F0490ED0000A2F7 /* UIButton+ActivityIndicatorView.m in Sources */,
-				934C04851F04ED0500659D9E /* DateUtil.m in Sources */,
 				93ADA9AD1F0490ED0000A2F7 /* PortraitNavigationController.m in Sources */,
 				93ADA9A91F0490ED0000A2F7 /* AutorotateNavigationController.m in Sources */,
 				93ADA9A11F0490ED0000A2F7 /* UILabel+FormattedText.m in Sources */,
 				93ADA9A21F0490ED0000A2F7 /* UIStoryboard+Addition.m in Sources */,
 				93ADA9451F0490B90000A2F7 /* main.m in Sources */,
+				939E56411F0B24B4007ED24D /* UIViewController+NavItem.m in Sources */,
 				93ADA9A81F0490ED0000A2F7 /* ArrayUtils.m in Sources */,
 				934C047C1F049E6E00659D9E /* BMPathViewController.m in Sources */,
 				93ADA9A41F0490ED0000A2F7 /* UIView+Create.m in Sources */,
+				939E56401F0B24B4007ED24D /* GGUtil.m in Sources */,
 				93ADA9A61F0490ED0000A2F7 /* UIView+Utils.m in Sources */,
+				939E56571F0B25B4007ED24D /* DateUtil.m in Sources */,
 				93ADA99D1F0490ED0000A2F7 /* NSObject+AutoDescription.m in Sources */,
 				934C04721F049DA700659D9E /* BMHomeViewController.m in Sources */,
 				934C04881F04FF4000659D9E /* BMCustomAnnotation.m in Sources */,
 				93ADA9A71F0490ED0000A2F7 /* UIViewController+Create.m in Sources */,
 				93ADA9AA1F0490ED0000A2F7 /* GGDatePickerHelper.m in Sources */,
 				93ADA99F1F0490ED0000A2F7 /* UIAlertView+Blocks.m in Sources */,
-				93ADA95D1F0490B90000A2F7 /* GGUtil.m in Sources */,
 				93ADA9A31F0490ED0000A2F7 /* UITableViewCell+Utils.m in Sources */,
-				93ADA9601F0490B90000A2F7 /* UIViewController+NavItem.m in Sources */,
 				934C048B1F0500B300659D9E /* BMPoint.m in Sources */,
+				939E56541F0B2523007ED24D /* BMMapView.m in Sources */,
 				93ADA9AB1F0490ED0000A2F7 /* GGImagePickerHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
