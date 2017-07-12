@@ -16,8 +16,15 @@
 		934C047D1F049E6E00659D9E /* BMPathViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 934C047B1F049E6E00659D9E /* BMPathViewController.storyboard */; };
 		934C047F1F04AB9400659D9E /* BaiduTraceSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 934C047E1F04AB9400659D9E /* BaiduTraceSDK.framework */; };
 		934C04811F04E51C00659D9E /* BaiduTraceSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 934C047E1F04AB9400659D9E /* BaiduTraceSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		934C04881F04FF4000659D9E /* BMCustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 934C04871F04FF4000659D9E /* BMCustomAnnotation.m */; };
 		934C048B1F0500B300659D9E /* BMPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 934C048A1F0500B300659D9E /* BMPoint.m */; };
+		936CF1C71F0CE7A80082664A /* BMTraceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 936CF1C61F0CE7A80082664A /* BMTraceHelper.m */; };
+		938868AB1F16056F009158B5 /* BMGISView.m in Sources */ = {isa = PBXBuildFile; fileRef = 938868AA1F16056F009158B5 /* BMGISView.m */; };
+		938868AE1F1605C4009158B5 /* BMCustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 938868AD1F1605C4009158B5 /* BMCustomAnnotation.m */; };
+		938868B01F161040009158B5 /* BMGISView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 938868AF1F161040009158B5 /* BMGISView.xib */; };
+		938868B31F161750009158B5 /* BMGISAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 938868B21F161750009158B5 /* BMGISAnnotationView.m */; };
+		938868B61F161B2F009158B5 /* BMIconAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 938868B51F161B2F009158B5 /* BMIconAnnotationView.m */; };
+		938868B91F161C75009158B5 /* BMGISAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 938868B81F161C75009158B5 /* BMGISAnnotation.m */; };
+		938868BC1F161DA2009158B5 /* BMIconAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 938868BB1F161DA2009158B5 /* BMIconAnnotation.m */; };
 		939E56401F0B24B4007ED24D /* GGUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 939E563D1F0B24B4007ED24D /* GGUtil.m */; };
 		939E56411F0B24B4007ED24D /* UIViewController+NavItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 939E563F1F0B24B4007ED24D /* UIViewController+NavItem.m */; };
 		939E564C1F0B24FF007ED24D /* AS.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 939E56451F0B24FF007ED24D /* AS.xcconfig */; };
@@ -80,10 +87,23 @@
 		934C047A1F049E6E00659D9E /* BMPathViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMPathViewController.m; sourceTree = "<group>"; };
 		934C047B1F049E6E00659D9E /* BMPathViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BMPathViewController.storyboard; sourceTree = "<group>"; };
 		934C047E1F04AB9400659D9E /* BaiduTraceSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduTraceSDK.framework; sourceTree = "<group>"; };
-		934C04861F04FF4000659D9E /* BMCustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMCustomAnnotation.h; sourceTree = "<group>"; };
-		934C04871F04FF4000659D9E /* BMCustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCustomAnnotation.m; sourceTree = "<group>"; };
 		934C04891F0500B300659D9E /* BMPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMPoint.h; sourceTree = "<group>"; };
 		934C048A1F0500B300659D9E /* BMPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMPoint.m; sourceTree = "<group>"; };
+		936CF1C51F0CE7A80082664A /* BMTraceHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMTraceHelper.h; sourceTree = "<group>"; };
+		936CF1C61F0CE7A80082664A /* BMTraceHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMTraceHelper.m; sourceTree = "<group>"; };
+		938868A91F16056F009158B5 /* BMGISView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMGISView.h; sourceTree = "<group>"; };
+		938868AA1F16056F009158B5 /* BMGISView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMGISView.m; sourceTree = "<group>"; };
+		938868AC1F1605C4009158B5 /* BMCustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMCustomAnnotation.h; sourceTree = "<group>"; };
+		938868AD1F1605C4009158B5 /* BMCustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMCustomAnnotation.m; sourceTree = "<group>"; };
+		938868AF1F161040009158B5 /* BMGISView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BMGISView.xib; sourceTree = "<group>"; };
+		938868B11F161750009158B5 /* BMGISAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMGISAnnotationView.h; sourceTree = "<group>"; };
+		938868B21F161750009158B5 /* BMGISAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMGISAnnotationView.m; sourceTree = "<group>"; };
+		938868B41F161B2F009158B5 /* BMIconAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMIconAnnotationView.h; sourceTree = "<group>"; };
+		938868B51F161B2F009158B5 /* BMIconAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMIconAnnotationView.m; sourceTree = "<group>"; };
+		938868B71F161C75009158B5 /* BMGISAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMGISAnnotation.h; sourceTree = "<group>"; };
+		938868B81F161C75009158B5 /* BMGISAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMGISAnnotation.m; sourceTree = "<group>"; };
+		938868BA1F161DA2009158B5 /* BMIconAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BMIconAnnotation.h; sourceTree = "<group>"; };
+		938868BB1F161DA2009158B5 /* BMIconAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMIconAnnotation.m; sourceTree = "<group>"; };
 		939E563C1F0B24B4007ED24D /* GGUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGUtil.h; sourceTree = "<group>"; };
 		939E563D1F0B24B4007ED24D /* GGUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGUtil.m; sourceTree = "<group>"; };
 		939E563E1F0B24B4007ED24D /* UIViewController+NavItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NavItem.h"; sourceTree = "<group>"; };
@@ -282,8 +302,6 @@
 				934C04791F049E6E00659D9E /* BMPathViewController.h */,
 				934C047A1F049E6E00659D9E /* BMPathViewController.m */,
 				934C047B1F049E6E00659D9E /* BMPathViewController.storyboard */,
-				934C04861F04FF4000659D9E /* BMCustomAnnotation.h */,
-				934C04871F04FF4000659D9E /* BMCustomAnnotation.m */,
 				934C04891F0500B300659D9E /* BMPoint.h */,
 				934C048A1F0500B300659D9E /* BMPoint.m */,
 			);
@@ -293,6 +311,12 @@
 		93ADA9541F0490B90000A2F7 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				938868AC1F1605C4009158B5 /* BMCustomAnnotation.h */,
+				938868AD1F1605C4009158B5 /* BMCustomAnnotation.m */,
+				938868B71F161C75009158B5 /* BMGISAnnotation.h */,
+				938868B81F161C75009158B5 /* BMGISAnnotation.m */,
+				938868BA1F161DA2009158B5 /* BMIconAnnotation.h */,
+				938868BB1F161DA2009158B5 /* BMIconAnnotation.m */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -300,6 +324,8 @@
 		93ADA9551F0490B90000A2F7 /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				936CF1C51F0CE7A80082664A /* BMTraceHelper.h */,
+				936CF1C61F0CE7A80082664A /* BMTraceHelper.m */,
 			);
 			path = modules;
 			sourceTree = "<group>";
@@ -309,6 +335,13 @@
 			children = (
 				939E56521F0B2523007ED24D /* BMMapView.h */,
 				939E56531F0B2523007ED24D /* BMMapView.m */,
+				938868A91F16056F009158B5 /* BMGISView.h */,
+				938868AA1F16056F009158B5 /* BMGISView.m */,
+				938868AF1F161040009158B5 /* BMGISView.xib */,
+				938868B11F161750009158B5 /* BMGISAnnotationView.h */,
+				938868B21F161750009158B5 /* BMGISAnnotationView.m */,
+				938868B41F161B2F009158B5 /* BMIconAnnotationView.h */,
+				938868B51F161B2F009158B5 /* BMIconAnnotationView.m */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -518,6 +551,7 @@
 				934C047D1F049E6E00659D9E /* BMPathViewController.storyboard in Resources */,
 				939E564E1F0B24FF007ED24D /* ProductionPrivate.xcconfig in Resources */,
 				939E564F1F0B24FF007ED24D /* StagingPrivate.xcconfig in Resources */,
+				938868B01F161040009158B5 /* BMGISView.xib in Resources */,
 				934C04781F049E5B00659D9E /* BMAnnotationViewController.storyboard in Resources */,
 				93ADA9471F0490B90000A2F7 /* Podfile in Resources */,
 				939E564C1F0B24FF007ED24D /* AS.xcconfig in Resources */,
@@ -583,14 +617,18 @@
 				93ADA9A51F0490ED0000A2F7 /* UIView+LayoutConstraintHelper.m in Sources */,
 				934C04771F049E5B00659D9E /* BMAnnotationViewController.m in Sources */,
 				93ADA9AC1F0490ED0000A2F7 /* GGNavigationController.m in Sources */,
+				938868AB1F16056F009158B5 /* BMGISView.m in Sources */,
 				93ADA9641F0490B90000A2F7 /* AppDelegate.m in Sources */,
 				93ADA99E1F0490ED0000A2F7 /* UIActionSheet+Blocks.m in Sources */,
 				93ADA9A01F0490ED0000A2F7 /* UIButton+ActivityIndicatorView.m in Sources */,
 				93ADA9AD1F0490ED0000A2F7 /* PortraitNavigationController.m in Sources */,
+				936CF1C71F0CE7A80082664A /* BMTraceHelper.m in Sources */,
 				93ADA9A91F0490ED0000A2F7 /* AutorotateNavigationController.m in Sources */,
 				93ADA9A11F0490ED0000A2F7 /* UILabel+FormattedText.m in Sources */,
 				93ADA9A21F0490ED0000A2F7 /* UIStoryboard+Addition.m in Sources */,
+				938868BC1F161DA2009158B5 /* BMIconAnnotation.m in Sources */,
 				93ADA9451F0490B90000A2F7 /* main.m in Sources */,
+				938868B31F161750009158B5 /* BMGISAnnotationView.m in Sources */,
 				939E56411F0B24B4007ED24D /* UIViewController+NavItem.m in Sources */,
 				93ADA9A81F0490ED0000A2F7 /* ArrayUtils.m in Sources */,
 				934C047C1F049E6E00659D9E /* BMPathViewController.m in Sources */,
@@ -598,16 +636,18 @@
 				939E56401F0B24B4007ED24D /* GGUtil.m in Sources */,
 				93ADA9A61F0490ED0000A2F7 /* UIView+Utils.m in Sources */,
 				939E56571F0B25B4007ED24D /* DateUtil.m in Sources */,
+				938868B91F161C75009158B5 /* BMGISAnnotation.m in Sources */,
 				93ADA99D1F0490ED0000A2F7 /* NSObject+AutoDescription.m in Sources */,
 				934C04721F049DA700659D9E /* BMHomeViewController.m in Sources */,
-				934C04881F04FF4000659D9E /* BMCustomAnnotation.m in Sources */,
 				93ADA9A71F0490ED0000A2F7 /* UIViewController+Create.m in Sources */,
+				938868AE1F1605C4009158B5 /* BMCustomAnnotation.m in Sources */,
 				93ADA9AA1F0490ED0000A2F7 /* GGDatePickerHelper.m in Sources */,
 				93ADA99F1F0490ED0000A2F7 /* UIAlertView+Blocks.m in Sources */,
 				93ADA9A31F0490ED0000A2F7 /* UITableViewCell+Utils.m in Sources */,
 				934C048B1F0500B300659D9E /* BMPoint.m in Sources */,
 				939E56541F0B2523007ED24D /* BMMapView.m in Sources */,
 				93ADA9AB1F0490ED0000A2F7 /* GGImagePickerHelper.m in Sources */,
+				938868B61F161B2F009158B5 /* BMIconAnnotationView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

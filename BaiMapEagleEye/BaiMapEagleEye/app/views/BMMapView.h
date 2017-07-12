@@ -24,4 +24,12 @@
 - (void)startUserLocationService;
 - (void)stopUserLocationService;
 
+
+/**
+ 添加标注
+
+ @param annotations 标注集合
+ */
+- (void)addAnnotations:(NSArray *)annotations;
+
 @end

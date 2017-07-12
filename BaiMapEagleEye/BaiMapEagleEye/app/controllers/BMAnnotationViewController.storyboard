@@ -1,10 +1,15 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="TKq-7Q-z4C">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="TKq-7Q-z4C">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Annotation View Controller-->
         <scene sceneID="ZTU-Mp-ODZ">
             <objects>
                 <viewController id="TKq-7Q-z4C" customClass="BMAnnotationViewController" sceneMemberID="viewController">
@@ -13,9 +18,49 @@
                         <viewControllerLayoutGuide type="bottom" id="tRj-lx-Lhx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cOb-So-n25">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91q-Bk-8fY">
+                                <rect key="frame" x="30" y="90" width="77" height="30"/>
+                                <state key="normal" title="添加起始点"/>
+                                <connections>
+                                    <action selector="addStartPoint:" destination="TKq-7Q-z4C" eventType="touchUpInside" id="27b-BE-kKt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWo-Fh-jN2">
+                                <rect key="frame" x="137" y="90" width="62" height="30"/>
+                                <state key="normal" title="添加终点"/>
+                                <connections>
+                                    <action selector="addEndPoint:" destination="TKq-7Q-z4C" eventType="touchUpInside" id="t9c-H5-my0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gC7-Hc-aiW">
+                                <rect key="frame" x="229" y="90" width="77" height="30"/>
+                                <state key="normal" title="添加普通点"/>
+                                <connections>
+                                    <action selector="addNormalPoint:" destination="TKq-7Q-z4C" eventType="touchUpInside" id="oZ1-o4-2MD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Fb-Hr-yY8">
+                                <rect key="frame" x="30" y="142" width="77" height="30"/>
+                                <state key="normal" title="添加河流点"/>
+                                <connections>
+                                    <action selector="addRiverPointAction:" destination="TKq-7Q-z4C" eventType="touchUpInside" id="RKu-q3-JdA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="91q-Bk-8fY" firstAttribute="top" secondItem="cOb-So-n25" secondAttribute="top" constant="90" id="57i-yV-1wW"/>
+                            <constraint firstItem="gC7-Hc-aiW" firstAttribute="leading" secondItem="ZWo-Fh-jN2" secondAttribute="trailing" constant="30" id="GCP-Dp-Vc0"/>
+                            <constraint firstItem="1Fb-Hr-yY8" firstAttribute="top" secondItem="91q-Bk-8fY" secondAttribute="bottom" constant="22" id="L9Y-6d-m0a"/>
+                            <constraint firstItem="1Fb-Hr-yY8" firstAttribute="leading" secondItem="cOb-So-n25" secondAttribute="leading" constant="30" id="MHn-vx-pOJ"/>
+                            <constraint firstItem="91q-Bk-8fY" firstAttribute="leading" secondItem="cOb-So-n25" secondAttribute="leading" constant="30" id="NHE-BF-IBW"/>
+                            <constraint firstItem="ZWo-Fh-jN2" firstAttribute="top" secondItem="cOb-So-n25" secondAttribute="top" constant="90" id="Nmu-RP-UVd"/>
+                            <constraint firstItem="ZWo-Fh-jN2" firstAttribute="leading" secondItem="91q-Bk-8fY" secondAttribute="trailing" constant="30" id="U2N-yQ-dVp"/>
+                            <constraint firstItem="gC7-Hc-aiW" firstAttribute="top" secondItem="cOb-So-n25" secondAttribute="top" constant="90" id="UZM-q4-cjS"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gUT-3g-xaL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -26,6 +71,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
     </simulatedMetricsContainer>
 </document>

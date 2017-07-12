@@ -7,6 +7,11 @@
 //
 
 #import "BMMapView.h"
+#import "BMCustomAnnotation.h"
+#import "BMGISAnnotationView.h"
+#import "BMIconAnnotationView.h"
+#import "BMGISAnnotation.h"
+#import "BMIconAnnotation.h"
 
 @interface BMMapView()
 <
@@ -39,7 +44,7 @@ BMKLocationServiceDelegate
     [self addSubview:mapView];
     [mapView autoPinEdgesToSuperviewMargins];
     mapView.delegate = self;
-    mapView.zoomEnabledWithTap = NO;
+    mapView.zoomEnabledWithTap = YES;
     mapView.rotateEnabled = NO;
     [self.mapView setBackgroundColor:[UIColor whiteColor]];
     BMKMapStatus *status = self.mapView.getMapStatus;
@@ -98,6 +103,10 @@ BMKLocationServiceDelegate
     [self stopUserLocationService];
 }
 
+- (void)addAnnotations:(NSArray *)annotations {
+    [self.mapView addAnnotations:annotations];
+}
+
 //处理方向变更信息
 - (void)didUpdateUserHeading:(BMKUserLocation *)userLocation
 {
@@ -110,6 +119,7 @@ BMKLocationServiceDelegate
 //处理位置坐标更新
 - (void)didUpdateBMKUserLocation:(BMKUserLocation *)userLocation
 {
+    DLog(@"userLocation.coordinate latitude : %lf , longitude: %lf", userLocation.location.coordinate.latitude, userLocation.location.coordinate.longitude);
     self.mapView.showsUserLocation = YES;//显示定位图层
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.mapView updateLocationData:userLocation];
@@ -124,13 +134,30 @@ BMKLocationServiceDelegate
 //添加标注代理
 - (BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation
 {
-    NSString *annotationViewID = @"DCAddressAnnotationView";
-    BMKPinAnnotationView *annotationView = nil;
-    if (annotationView == nil) {
-        annotationView = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:annotationViewID];
-        annotationView.animatesDrop = YES;
+    if ([annotation isKindOfClass:[BMGISAnnotation class]]) {
+        NSString *identitier = @"BMCustomAnnotationView";
+        BMGISAnnotation *gisAnnotation = (BMGISAnnotation *)annotation;
+        BMGISAnnotationView *customView = (BMGISAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:identitier];
+        if (!customView) {
+            customView = [[BMGISAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identitier];
+        }
+        NSString *content = gisAnnotation.path;
+        customView.content = content;
+        customView.canShowCallout = NO;
+        customView.centerOffset = CGPointMake(-12.f, -48.f);
+        return customView;
+    } else if ([annotation isKindOfClass:[BMIconAnnotation class]]){
+        
+        NSString *identifier = @"BMIconAnnotationView";
+        BMIconAnnotation *iconAnnotation = (BMIconAnnotation *)annotation;
+        BMIconAnnotationView *iconAnnotationView = (BMIconAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+        if (!iconAnnotationView) {
+            iconAnnotationView = [[BMIconAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
+        }
+        iconAnnotationView.imageName = iconAnnotation.imageName;
+        return iconAnnotationView;
     }
-    return annotationView;
+    return nil;
 }
 
 - (NSArray *)pointArray {
