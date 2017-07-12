@@ -25,10 +25,21 @@ BTKTrackDelegate
 
 /** <##> */
 @property (strong, nonatomic) NSString *entityName;
+/** <##> */
+@property (strong, nonatomic) NSMutableArray *pointArray;
 
 @end
 
 @implementation BMTraceHelper
+
+#pragma mark - 配置地图服务
+- (void)configEagleEyeService {
+    // 使用SDK的任何功能前，都需要先调用initInfo:方法设置基础信息。
+    BTKServiceOption *sop = [[BTKServiceOption alloc] initWithAK:AK mcode:mcode serviceID:serviceID keepAlive:true];
+    [[BTKAction sharedInstance] initInfo:sop];
+    //修改采集周期 ： 鹰眼iOS SDK默认的采集周期为5秒，上传周期为30秒
+    //[[BTKAction sharedInstance] changeGatherAndPackIntervals:2 packInterval:10 delegate:self];
+}
 
 - (void) startService{
     NSString *timeStr = [DateUtil showTimeYYYYMMDDWithDate:[NSDate date] format:@"YYYY-MM-dd HH:mm:ss"];
@@ -46,7 +57,6 @@ BTKTrackDelegate
 
 - (void) stopService {
     dispatch_async(dispatch_get_main_queue(), ^{
-        
         [[BTKAction sharedInstance] stopService:self];
         [self queryHitstoryTrack];
     });
@@ -57,7 +67,6 @@ BTKTrackDelegate
         [[BTKAction sharedInstance] startGather:self];
     });
     //创建定时器，每隔一定的时间去绘制轨迹
-    
 }
 
 - (void) stopGather {
@@ -137,16 +146,14 @@ BTKTrackDelegate
 }
 
 - (void)queryHitstoryTrack {
-//    [self.mapView stopUserLocationService];
-    
     NSUInteger endTime = [[NSDate date] timeIntervalSince1970];
     BTKQueryTrackProcessOption *option = [[BTKQueryTrackProcessOption alloc] init];
     option.denoise = FALSE;
     option.vacuate = FALSE;//抽稀属性只有查询历史轨迹时才有作用
     option.mapMatch = FALSE;
     option.radiusThreshold = 55;
-    
-    BTKQueryHistoryTrackRequest *request = [[BTKQueryHistoryTrackRequest alloc] initWithEntityName:@"hezhang11499169032" startTime:endTime - 84400 endTime:endTime isProcessed:TRUE processOption:option supplementMode:BTK_TRACK_PROCESS_OPTION_SUPPLEMENT_MODE_WALKING outputCoordType:BTK_COORDTYPE_BD09LL sortType:BTK_TRACK_SORT_TYPE_ASC pageIndex:1 pageSize:100 serviceID:serviceID tag:13];
+//    hezhang11499169032
+    BTKQueryHistoryTrackRequest *request = [[BTKQueryHistoryTrackRequest alloc] initWithEntityName:self.entityName startTime:endTime - 84400 endTime:endTime isProcessed:TRUE processOption:option supplementMode:BTK_TRACK_PROCESS_OPTION_SUPPLEMENT_MODE_WALKING outputCoordType:BTK_COORDTYPE_BD09LL sortType:BTK_TRACK_SORT_TYPE_ASC pageIndex:1 pageSize:100 serviceID:serviceID tag:13];
     [[BTKTrackAction sharedInstance] queryHistoryTrackWith:request delegate:self];
 }
 
@@ -188,24 +195,24 @@ BTKTrackDelegate
     NSArray *points = dict[@"points"];
     
     //使用代理或block回调
+    BMPoint *startPointModel = [BMPoint modelWithJSON:startPoint];
+    BMPoint *endPointModel = [BMPoint modelWithJSON:endPoint];
+    NSArray *pointsModel = [NSArray modelArrayWithClass:[BMPoint class] json:points];
     
-//    BMPoint *startPointModel = [BMPoint modelWithJSON:startPoint];
-//    BMPoint *endPointModel = [BMPoint modelWithJSON:endPoint];
-//    NSArray *pointsModel = [NSArray modelArrayWithClass:[BMPoint class] json:points];
-//    
-//    [self.pointArray removeAllObjects];
-//    if (startPointModel) {
-//        [self.pointArray addObject:[startPointModel pointToAnnotation]];
-//    }
-//    for (BMPoint *point in pointsModel) {
-//        [self.pointArray addObject:[point pointToAnnotation]];
-//    }
-//    if (endPointModel) {
-//        [self.pointArray addObject:[endPointModel pointToAnnotation]];
-//    }
-//    dispatch_async(dispatch_get_main_queue(), ^{
-//        [self.mapView updateAnnotationViewWithPointArray:self.pointArray];
-//    });
+    [self.pointArray removeAllObjects];
+    if (startPointModel) {
+        [self.pointArray addObject:[startPointModel pointToAnnotation]];
+    }
+    for (BMPoint *point in pointsModel) {
+        [self.pointArray addObject:[point pointToAnnotation]];
+    }
+    if (endPointModel) {
+        [self.pointArray addObject:[endPointModel pointToAnnotation]];
+    }
+    
+    if ([self.delegate respondsToSelector:@selector(queryHistoryTrackWithPointArray:)]) {
+        [self.delegate queryHistoryTrackWithPointArray:self.pointArray];
+    }
 }
 #pragma mark - *********************BTKTrackDelegate************************
 
@@ -216,12 +223,12 @@ BTKTrackDelegate
     return [NSDictionary dictionaryWithDictionary:customData];
 }
 
-//- (NSMutableArray *)pointArray {
-//    if (!_pointArray) {
-//        _pointArray = [NSMutableArray array];
-//    }
-//    return _pointArray;
-//}
+- (NSMutableArray *)pointArray {
+    if (!_pointArray) {
+        _pointArray = [NSMutableArray array];
+    }
+    return _pointArray;
+}
 
 
 @end

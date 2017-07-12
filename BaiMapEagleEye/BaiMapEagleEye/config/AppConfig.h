@@ -23,3 +23,5 @@
 
 //应用最终上线的bundleID
 #define FinalBundleID  @"hk.ganguo.xxx"
+
+typedef void (^resultBlock)(id result, NSString *error);

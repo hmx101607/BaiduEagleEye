@@ -33,6 +33,7 @@ BMKLocationServiceDelegate
 {
     self = [super initWithFrame:frame];
     if (self) {
+        self.keepOnLocation = NO;
         [self setupUI];
     }
     return self;
@@ -69,6 +70,14 @@ BMKLocationServiceDelegate
 - (void)mapViewWillDisappear {
     [self.mapView viewWillDisappear];
     self.mapView.delegate = nil;
+}
+
+- (void)setKeepOnLocation:(BOOL)keepOnLocation {
+    _keepOnLocation = keepOnLocation;
+    if (keepOnLocation) {
+        [self stopUserLocationService];
+        [self startUserLocationService];
+    }
 }
 
 - (void)startUserLocationService {
@@ -125,6 +134,9 @@ BMKLocationServiceDelegate
         [self.mapView updateLocationData:userLocation];
     });
     self.mapView.centerCoordinate = userLocation.location.coordinate;
+    if (!self.keepOnLocation) {
+        [self stopUserLocationService];
+    }
 }
 
 - (void)didFailToLocateUserWithError:(NSError *)error {
