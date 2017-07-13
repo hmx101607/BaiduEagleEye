@@ -20,7 +20,7 @@
 @interface BMMapView : UIView
 
 /** 地图 */
-@property (strong, nonatomic) BMKMapView* mapView;
+@property (strong, nonatomic, nullable) BMKMapView* mapView;
 
 /** 持续定位: 默认为 NO */
 @property (assign, nonatomic) BOOL keepOnLocation;
@@ -39,16 +39,16 @@
 
  @param annotations 标注集合
  */
-- (void)addAnnotations:(NSArray *)annotations;
+- (void)addAnnotations:(NSArray *_Nonnull)annotations;
 
-- (void)updateAnnotationViewWithPointArray:(NSArray *)pointArray;
+- (void)updateAnnotationViewWithPointArray:(NSArray *_Nonnull)pointArray;
 
 /**
  绘制轨迹
 
  @param array 轨迹集合
  */
-- (void)drawPolygonWithCotionCoordinateds:(NSArray <BMCustomAnnotation *>*)array;
+- (void)drawPolygonWithCotionCoordinateds:(NSArray <BMCustomAnnotation *>*_Nonnull)array;
 
 
 /**

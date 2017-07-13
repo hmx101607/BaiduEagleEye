@@ -49,17 +49,44 @@
                                     <action selector="addRiverPointAction:" destination="TKq-7Q-z4C" eventType="touchUpInside" id="RKu-q3-JdA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="1001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHm-4e-rtu">
+                                <rect key="frame" x="115" y="142" width="30" height="30"/>
+                                <state key="normal" title="无"/>
+                                <connections>
+                                    <action selector="SwitchTopographicMapAction:" destination="TKq-7Q-z4C" eventType="touchUpInside" id="bsB-dV-Cbe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dg9-Nj-5BF">
+                                <rect key="frame" x="176" y="142" width="46" height="30"/>
+                                <state key="normal" title="标准图"/>
+                                <connections>
+                                    <action selector="SwitchTopographicMapAction:" destination="TKq-7Q-z4C" eventType="touchUpInside" id="Q5S-Lq-X1p"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QPS-Y0-1Fo">
+                                <rect key="frame" x="244" y="142" width="46" height="30"/>
+                                <state key="normal" title="卫星图"/>
+                                <connections>
+                                    <action selector="SwitchTopographicMapAction:" destination="TKq-7Q-z4C" eventType="touchUpInside" id="bhw-xt-9b4"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="91q-Bk-8fY" firstAttribute="top" secondItem="cOb-So-n25" secondAttribute="top" constant="90" id="57i-yV-1wW"/>
+                            <constraint firstItem="Dg9-Nj-5BF" firstAttribute="top" secondItem="ZWo-Fh-jN2" secondAttribute="bottom" constant="22" id="5QY-PR-Z8P"/>
+                            <constraint firstItem="QPS-Y0-1Fo" firstAttribute="leading" secondItem="Dg9-Nj-5BF" secondAttribute="trailing" constant="22" id="687-m6-39O"/>
+                            <constraint firstItem="QPS-Y0-1Fo" firstAttribute="top" secondItem="gC7-Hc-aiW" secondAttribute="bottom" constant="22" id="9Pl-4Y-h27"/>
                             <constraint firstItem="gC7-Hc-aiW" firstAttribute="leading" secondItem="ZWo-Fh-jN2" secondAttribute="trailing" constant="30" id="GCP-Dp-Vc0"/>
                             <constraint firstItem="1Fb-Hr-yY8" firstAttribute="top" secondItem="91q-Bk-8fY" secondAttribute="bottom" constant="22" id="L9Y-6d-m0a"/>
                             <constraint firstItem="1Fb-Hr-yY8" firstAttribute="leading" secondItem="cOb-So-n25" secondAttribute="leading" constant="30" id="MHn-vx-pOJ"/>
+                            <constraint firstItem="GHm-4e-rtu" firstAttribute="leading" secondItem="1Fb-Hr-yY8" secondAttribute="trailing" constant="8" id="MsD-rr-Qaj"/>
                             <constraint firstItem="91q-Bk-8fY" firstAttribute="leading" secondItem="cOb-So-n25" secondAttribute="leading" constant="30" id="NHE-BF-IBW"/>
                             <constraint firstItem="ZWo-Fh-jN2" firstAttribute="top" secondItem="cOb-So-n25" secondAttribute="top" constant="90" id="Nmu-RP-UVd"/>
                             <constraint firstItem="ZWo-Fh-jN2" firstAttribute="leading" secondItem="91q-Bk-8fY" secondAttribute="trailing" constant="30" id="U2N-yQ-dVp"/>
                             <constraint firstItem="gC7-Hc-aiW" firstAttribute="top" secondItem="cOb-So-n25" secondAttribute="top" constant="90" id="UZM-q4-cjS"/>
+                            <constraint firstItem="GHm-4e-rtu" firstAttribute="top" secondItem="ZWo-Fh-jN2" secondAttribute="bottom" constant="22" id="Zgh-0t-Xvd"/>
+                            <constraint firstItem="Dg9-Nj-5BF" firstAttribute="leading" secondItem="GHm-4e-rtu" secondAttribute="trailing" constant="31" id="uvF-r0-9oa"/>
                         </constraints>
                     </view>
                 </viewController>

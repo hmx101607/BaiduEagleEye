@@ -27,11 +27,11 @@
     self.title = @"标注";
     
     BMMapView *mapView = [[BMMapView alloc] init];
-    mapView.frame = CGRectMake(0, SCREEN_HEIGHT - 500.f, SCREEN_WIDTH , 300.f);
+    mapView.frame = CGRectMake(0, 200.f, SCREEN_WIDTH , SCREEN_HEIGHT - 200.f);
     [self.view addSubview:mapView];
     self.mapView = mapView;
     
-    [self.mapView handleDistrictSearchWithCity:@"长沙" district:nil];
+//    [self.mapView handleDistrictSearchWithCity:@"长沙" district:nil];
 }
 
 - (IBAction)addStartPoint:(UIButton *)sender {
@@ -67,6 +67,30 @@
     annotation.path = @"四方井";
     [self.mapView addAnnotations:@[annotation]];
 }
+
+- (IBAction)SwitchTopographicMapAction:(UIButton *)sender {
+    NSInteger tag = sender.tag;
+    switch (tag) {
+        case 1001:
+        {
+            self.mapView.mapView.mapType = BMKMapTypeNone;
+            break;
+        }
+        case 1002:
+        {
+            self.mapView.mapView.mapType = BMKMapTypeStandard;
+            break;
+        }
+        case 1003:
+        {
+            self.mapView.mapView.mapType = BMKMapTypeSatellite;
+            break;
+        }
+        default:
+            break;
+    }
+}
+
 
 @end
 
