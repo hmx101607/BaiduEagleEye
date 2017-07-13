@@ -11,7 +11,7 @@
 
 @protocol BMTraceHelperDelegate <NSObject>
 
-- (void)queryHistoryTrackWithPointArray:(NSArray<BMPoint*> *)pointArray;
+- (void)queryHistoryTrackWithPointArray:(NSArray *)pointArray;
 
 @end
 

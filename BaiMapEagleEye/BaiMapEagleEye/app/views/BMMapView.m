@@ -12,18 +12,20 @@
 #import "BMIconAnnotationView.h"
 #import "BMGISAnnotation.h"
 #import "BMIconAnnotation.h"
+#import "BMPoint.h"
 
 @interface BMMapView()
 <
 BMKMapViewDelegate,
 BMKLocationServiceDelegate
 >
-/** 地图 */
-@property (strong, nonatomic) BMKMapView* mapView;
+
 /** 定位服务 */
 @property (strong, nonatomic) BMKLocationService *locService;
 /** 定位点集合 */
 @property (strong, nonatomic) NSArray *pointArray;
+/** 轨迹 */
+@property (strong, nonatomic) BMKPolyline *polyline;
 
 @end
 
@@ -35,6 +37,7 @@ BMKLocationServiceDelegate
     if (self) {
         self.keepOnLocation = NO;
         [self setupUI];
+        
     }
     return self;
 }
@@ -56,12 +59,6 @@ BMKLocationServiceDelegate
     [self startUserLocationService];
 }
 
-- (void)updateAnnotationViewWithPointArray:(NSArray *)pointArray {
-    [self.mapView removeAnnotations:self.mapView.annotations];
-    self.pointArray = [pointArray copy];
-    [self.mapView addAnnotations:pointArray];
-}
-
 - (void)mapViewWillAppear {
     [self.mapView viewWillAppear];
     self.mapView.delegate = self;
@@ -79,6 +76,40 @@ BMKLocationServiceDelegate
         [self startUserLocationService];
     }
 }
+
+
+- (void)updateAnnotationViewWithPointArray:(NSArray *)pointArray {
+    [self.mapView removeAnnotations:self.mapView.annotations];
+    self.pointArray = [pointArray copy];
+    [self.mapView addAnnotations:pointArray];
+}
+
+- (void)drawPolygonWithCotionCoordinateds:(NSArray <BMCustomAnnotation *>*)array {
+    CLLocationCoordinate2D paths[array.count];
+    for (NSInteger i = 0; i < array.count; i++) {
+        BMCustomAnnotation *point = array[i];
+        CLLocationCoordinate2D coordinated = CLLocationCoordinate2DMake(point.coordinate.latitude, point.coordinate.longitude);
+        paths[i] = coordinated;
+    }
+    
+    self.polyline = [BMKPolyline polylineWithCoordinates:paths count:array.count];
+    [self.mapView addOverlay:self.polyline];
+    
+    //添加起始点
+    BMIconAnnotation *iconAnnotation1 = [[BMIconAnnotation alloc] init];
+    BMCustomAnnotation *point1 = array.firstObject;
+    iconAnnotation1.coordinate = point1.coordinate;
+    iconAnnotation1.imageName = @"QXLocationViewController-Annotation-normel";
+    [self.mapView addAnnotation:iconAnnotation1];
+    
+    //添加终点
+    BMIconAnnotation *iconAnnotation2 = [[BMIconAnnotation alloc] init];
+    BMCustomAnnotation *point2 = array.lastObject;
+    iconAnnotation2.coordinate = point2.coordinate;
+    iconAnnotation2.imageName = @"QXLocationViewController-Annotation-selected";
+    [self.mapView addAnnotation:iconAnnotation2];
+}
+
 
 - (void)startUserLocationService {
     if (self.locService) {
@@ -168,9 +199,40 @@ BMKLocationServiceDelegate
         }
         iconAnnotationView.imageName = iconAnnotation.imageName;
         return iconAnnotationView;
+    } else {
+        NSString *annotationViewID = @"DCAddressAnnotationView";
+        BMKPinAnnotationView *annotationView = nil;
+        if (annotationView == nil) {
+            annotationView = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:annotationViewID];
+            annotationView.animatesDrop = YES;
+        }
+        return annotationView;
+    }
+}
+
+//根据overlay生成对应的View:轨迹
+- (BMKOverlayView *)mapView:(BMKMapView *)mapView viewForOverlay:(id <BMKOverlay>)overlay
+{
+    if ([overlay isKindOfClass:[BMKPolygon class]])
+    {
+        BMKPolygonView* polygonView = [[BMKPolygonView alloc] initWithOverlay:overlay];
+        polygonView.strokeColor = [[UIColor alloc] initWithRed:0.0 green:0.5 blue:0.0 alpha:0.6];
+        polygonView.lineWidth = 2.0;
+        polygonView.lineDash = YES;
+        return polygonView;
+    }
+    
+    if ([overlay isKindOfClass:[BMKPolyline class]])
+    {
+        BMKPolylineView* polylineView = [[BMKPolylineView alloc] initWithOverlay:overlay];
+        polylineView.strokeColor = [[UIColor alloc] initWithRed:0.0 green:0.5 blue:0.0 alpha:0.6];
+        polylineView.lineWidth = 2.0;
+        polylineView.lineDash = YES;
+        return polylineView;
     }
     return nil;
 }
+
 
 - (NSArray *)pointArray {
     if (!_pointArray) {

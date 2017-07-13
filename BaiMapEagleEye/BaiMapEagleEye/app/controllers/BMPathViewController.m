@@ -62,6 +62,7 @@ BMTraceHelperDelegate
     [self.baseView addSubview:mapView];
     [mapView autoPinEdgesToSuperviewMargins];
     self.mapView = mapView;
+    
 }
 
 - (IBAction)startServiceAction:(UIButton *)sender {
@@ -95,15 +96,17 @@ BMTraceHelperDelegate
     [self.traceHelper queryTrackHistory];
 }
 
-
-- (void)queryHistoryTrackWithPointArray:(NSArray<BMPoint *> *)pointArray {
+#pragma mark - BMTraceHelperDelegate
+- (void)queryHistoryTrackWithPointArray:(NSArray *)pointArray {
     DLog(@"pointArray : %@", pointArray);
-    [self.mapView updateAnnotationViewWithPointArray:pointArray];
+//    [self.mapView updateAnnotationViewWithPointArray:pointArray];
+    [self.mapView drawPolygonWithCotionCoordinateds:[pointArray copy]];
 }
 
 - (BMTraceHelper *)traceHelper {
     if (!_traceHelper) {
         _traceHelper = [[BMTraceHelper alloc] init];
+        _traceHelper.delegate = self;
     }
     return _traceHelper;
 }
