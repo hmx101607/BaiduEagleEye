@@ -7,9 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+
 #import "BaiduTraceSDK/BaiduTraceSDK.h"
 #import <BaiduMapAPI_Map/BMKMapComponent.h>
+#import <BaiduMapAPI_Utils/BMKUtilsComponent.h>
+#import <BaiduMapAPI_Map/BMKMapComponent.h>
+#import <BaiduMapAPI_Search/BMKSearchComponent.h>
 #import <BaiduMapAPI_Location/BMKLocationComponent.h>
+
 #import "BMCustomAnnotation.h"
 
 @interface BMMapView : UIView
@@ -45,4 +50,26 @@
  */
 - (void)drawPolygonWithCotionCoordinateds:(NSArray <BMCustomAnnotation *>*)array;
 
+
+/**
+ 行政区划
+
+ @param city 城市名字（必须）
+ @param district 区县名字（可选）
+ */
+- (void) handleDistrictSearchWithCity:(NSString * _Nonnull)city district:(NSString * _Nullable)district;
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+

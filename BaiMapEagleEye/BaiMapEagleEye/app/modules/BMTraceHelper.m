@@ -145,6 +145,7 @@ BTKTrackDelegate
     [self queryHitstoryTrack];
 }
 
+
 - (void)queryHitstoryTrack {
     NSUInteger endTime = [[NSDate date] timeIntervalSince1970];
     BTKQueryTrackProcessOption *option = [[BTKQueryTrackProcessOption alloc] init];

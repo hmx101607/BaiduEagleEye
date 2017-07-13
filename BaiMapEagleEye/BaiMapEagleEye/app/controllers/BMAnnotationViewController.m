@@ -31,7 +31,7 @@
     [self.view addSubview:mapView];
     self.mapView = mapView;
     
-    
+    [self.mapView handleDistrictSearchWithCity:@"长沙" district:nil];
 }
 
 - (IBAction)addStartPoint:(UIButton *)sender {
