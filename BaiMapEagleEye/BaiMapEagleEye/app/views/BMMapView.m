@@ -238,7 +238,7 @@ BMKDistrictSearchDelegate
         BMKPolygonView* polygonView = [[BMKPolygonView alloc] initWithOverlay:overlay];
         polygonView.strokeColor = [[UIColor alloc] initWithRed:0.0 green:0.5 blue:0.0 alpha:0.6];
         polygonView.lineWidth = 2.0;
-        polygonView.lineDash = YES;
+        polygonView.lineDash = NO;
         return polygonView;
     }
     
@@ -247,7 +247,7 @@ BMKDistrictSearchDelegate
         BMKPolylineView* polylineView = [[BMKPolylineView alloc] initWithOverlay:overlay];
         polylineView.strokeColor = [[UIColor alloc] initWithRed:0.0 green:0.5 blue:0.0 alpha:0.6];
         polylineView.lineWidth = 2.0;
-        polylineView.lineDash = YES;
+        polylineView.lineDash = NO;
         return polylineView;
     }
     return nil;
