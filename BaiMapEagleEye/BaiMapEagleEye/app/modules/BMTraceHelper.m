@@ -154,6 +154,7 @@ BTKTrackDelegate
     option.mapMatch = FALSE;
     option.radiusThreshold = 55;
 //    hezhang11499169032
+    endTime = 1499947276;
     NSString *entityName = @"hezhang11499940854";//endTime : 1499947276
     BTKQueryHistoryTrackRequest *request = [[BTKQueryHistoryTrackRequest alloc] initWithEntityName:entityName startTime:endTime - 84400 endTime:endTime isProcessed:TRUE processOption:option supplementMode:BTK_TRACK_PROCESS_OPTION_SUPPLEMENT_MODE_WALKING outputCoordType:BTK_COORDTYPE_BD09LL sortType:BTK_TRACK_SORT_TYPE_ASC pageIndex:1 pageSize:100 serviceID:serviceID tag:13];
     [[BTKTrackAction sharedInstance] queryHistoryTrackWith:request delegate:self];

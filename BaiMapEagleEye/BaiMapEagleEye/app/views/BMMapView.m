@@ -211,6 +211,8 @@ BMKDistrictSearchDelegate
     
     self.polyline = [BMKPolyline polylineWithCoordinates:paths count:array.count];
     [self.mapView addOverlay:self.polyline];
+    BMKPolygon *polygon = [BMKPolygon polygonWithCoordinates:paths count:array.count];
+    [self mapViewFitPolygon:polygon];
     
     //添加起始点
     BMIconAnnotation *iconAnnotation1 = [[BMIconAnnotation alloc] init];
@@ -320,7 +322,12 @@ BMKDistrictSearchDelegate
     rect.origin = BMKMapPointMake(ltX , ltY);
     rect.size = BMKMapSizeMake(rbX - ltX, rbY - ltY);
     [_mapView setVisibleMapRect:rect];
-    _mapView.zoomLevel = _mapView.zoomLevel - 0.3;
+    
+    CGFloat zoomLevel = _mapView.zoomLevel - 0.3;
+    BMKMapStatus *mapStatus = [_mapView getMapStatus];
+    mapStatus.fLevel = zoomLevel;
+    [_mapView setMapStatus:mapStatus withAnimation:NO];
+//    _mapView.zoomLevel = _mapView.zoomLevel - 0.3;
 }
 
 - (BMKPolygon*)transferPathStringToPolygon:(NSString*) path {
